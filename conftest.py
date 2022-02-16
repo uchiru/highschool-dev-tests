@@ -14,10 +14,10 @@ def browser():
     print("\nquit browser..")
     browser.quit()
 
-
 @pytest.fixture(scope='class')
-def avtorithaision(browser, login = '141', password = '19468персик'):
+def avtorithaision(browser, login='141', password='19468персик'):
     browser.get('https://57211.shot-uchi.ru/')
-    login_input = wdw(browser, 15).until(EC.presence_of_element_located(usingelements.login_input)).send_keys(login)
-    password_input = wdw(browser, 35).until(EC.presence_of_element_located(usingelements.password_input)).send_keys(password)
+    login_input = wdw(browser, 15).until(EC.presence_of_element_located(usingelements.login_input)).send_keys(login_1)
+    password_input = wdw(browser, 35).until(EC.presence_of_element_located(usingelements.password_input)).send_keys(password_1)
     enter = wdw(browser, 15).until(EC.presence_of_element_located(usingelements.enter_button)).click()
+
