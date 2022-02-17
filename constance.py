@@ -1,3 +1,3 @@
 
 
-subject= ['bio','lit','biolit']
+subject = ['bio','lit','biolit'] # список чекбоксов выбираемых на странице тарифов
