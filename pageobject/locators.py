@@ -25,6 +25,8 @@ class payments_page_elements():
     math_check_box = (By.XPATH, '//span[text()="Математика"]')
     rus_check_box = (By.XPATH, '//span[text()="Русский язык"]')
     eng_check_box = (By.XPATH, '//span[text()="Английский язык"]')
+    prog_check_box = (By.XPATH,'//span[text()="Программирование"]')
+    plan_check_box = (By.XPATH,'//span[text()="Планирование"]')
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
 
 
