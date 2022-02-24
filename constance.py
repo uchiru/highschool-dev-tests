@@ -1,7 +1,7 @@
 
 
 new_subjects = ['bio', 'lit', 'biolit'] # список чекбоксов выбираемых на странице тарифов
-old_subjects = ['math', 'rus', 'eng', 'prog', 'plan']
+old_subjects = ['math', 'rus', 'eng', 'prog', 'plan', 'all_check']
 card_1 = '4242 4242 4242 4242'
 mmyy_1 = '12/22'
 cvv_1 = '111'
