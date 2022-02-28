@@ -7,20 +7,14 @@ class avtor_page_elements():
     enter_button = (By.CSS_SELECTOR, '[value = "Войти"]')
 
 
-class subjects_checkbox():
-    modern_biology_check_box = (By.XPATH, '//span[text()="Modern Биология"]')
-    modern_literature_check_box = (By.XPATH, '//span[text()="Литература"]')
-    math_check_box = (By.XPATH, '//span[text()="Математика"]')
-    rus_check_box = (By.XPATH, '//span[text()="Русский язык"]')
-    eng_check_box = (By.XPATH, '//span[text()="Английский язык"]')
-
 
 class headpage_elements():
     full_version_button = (By.CSS_SELECTOR, '[data-testid="headbar-fullversion"]')
+    biology = (By.CSS_SELECTOR, '[data-highlight-name="content_bio"]')
 
 
 class payments_page_elements():
-    modern_biology_check_box = (By.XPATH, '//span[text()="Modern Биология"]')
+    modern_biology_check_box = (By.XPATH, '//span[text()="Биология"]')
     modern_literature_check_box = (By.XPATH, '//span[text()="Литература"]')
     math_check_box = (By.XPATH, '//span[text()="Математика"]')
     rus_check_box = (By.XPATH, '//span[text()="Русский язык"]')
@@ -28,6 +22,8 @@ class payments_page_elements():
     prog_check_box = (By.XPATH,'//span[text()="Программирование"]')
     plan_check_box = (By.XPATH,'//span[text()="Планирование"]')
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
+    gradusnik_halfyear = (By.CSS_SELECTOR, '[data-qa-marker ="полгода"]')
+    gradusnik_month = (By.CSS_SELECTOR, '[data-qa-marker ="месяц"]')
 
 
 class card_data_page_elements():
