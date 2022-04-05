@@ -1,0 +1,40 @@
+on:
+  push: {}
+  #schedule:
+   # - cron:  '*/50 *,* * * *'
+    
+  workflow_dispatch:
+    inputs:
+      arguments:
+        required: false
+        default: ""
+        description: "pytest additional arguments, e.g. `-m simpletest`"
+
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    name: test
+    env:
+      SELENOID_BIN: $HOME/bin/cm
+    strategy:
+      matrix:
+        browser: [remote_chrome]
+    steps:
+    - uses: actions/setup-python@v2
+      with: { python-version: '3.9.7' }
+    - run: mkdir -p $(dirname $SELENOID_BIN) && curl -s https://aerokube.com/cm/bash | bash && chmod +x ./cm && mv ./cm $SELENOID_BIN
+    - uses: actions/checkout@v2
+    - run: python3 -m pip install -r requirements.txt
+    - run: $SELENOID_BIN selenoid update --last-versions 2
+    - run: $SELENOID_BIN selenoid start
+    #- run: pytest ${{github.event.inputs.arguments}} --bn ${{ matrix.browser }}
+    - run: |
+        if [ $GITHUB_EVENT_NAME = "schedule" ]; then
+          export args="-m regression_prod --qase_enabled enable"
+        else
+          export args='${{github.event.inputs.arguments}}'
+        fi
+          pytest ${args} --bn ${{ matrix.browser }}
+      env:
+        SELENOID_URL: http://localhost:4444/wd/hub
