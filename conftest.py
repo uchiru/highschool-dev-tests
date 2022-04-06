@@ -30,16 +30,23 @@ def browser(request):
         #этот код выполнится после завершения теста
         print("\nquit browser..")
         browser.quit()
+    elif request.config.getoption("bn") == "chrome":
+        options = Options()
+        browser = webdriver.Chrome(options=options)
+        print("\nstart chrome browser for test..")
+        yield browser
+        browser.quit()
 
 
-@pytest.fixture(scope='class')
-def browser(request):
-    # return request.config.getoption("--language")
-    options = Options()
-    browser = webdriver.Chrome(options=options)
-    print("\nstart chrome browser for test..")
-    yield browser
-    browser.quit()
+
+# @pytest.fixture(scope='class')
+# def browser(request):
+#     # return request.config.getoption("--language")
+#     options = Options()
+#     browser = webdriver.Chrome(options=options)
+#     print("\nstart chrome browser for test..")
+#     yield browser
+#     browser.quit()
 
 
 @pytest.fixture(scope='class')
