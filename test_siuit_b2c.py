@@ -5,6 +5,19 @@ import time
 
 
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
+class Test_head_page_elements_exists_b2c:
+
+    def test_modern_byilogy_exist(self, browser):
+        browser.implicitly_wait(5)
+        assert browser.find_elements_by_css_selector(
+            '[href="http://uchi.ru/modern-subjects/high-school/biology"]'), 'biology button not exist'
+
+    def test_moder_literature_exist(self, browser):
+        assert browser.find_elements_by_css_selector(
+            '[href="http://uchi.ru/modern-subjects/high-school/literature"]'), 'literature button not exist'
+
+
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_high_school_buys_b2c:
 
     @pytest.mark.parametrize('checkboxes', new_subjects)
@@ -14,7 +27,8 @@ class Test_high_school_buys_b2c:
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
-        congrat_button_click = wdw(browser, 10).until(EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
+        congrat_button_click = wdw(browser, 10).until(
+            EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
     @pytest.mark.parametrize('old_checkboxes', old_subjects)
     def test_old_subjects_buy_year(self, browser, old_checkboxes):
