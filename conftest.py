@@ -2,7 +2,7 @@ import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.remote import remote_connection
-from pageobjects.methods import *
+from pageobject.methods import *
 from constance import *
 from selenium.webdriver.chrome.options import Options
 import time
