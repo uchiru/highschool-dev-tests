@@ -1,5 +1,6 @@
+name: autotests
 on:
-  push: {}
+
   #schedule:
    # - cron:  '*/50 *,* * * *'
     
