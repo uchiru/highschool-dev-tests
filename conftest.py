@@ -15,19 +15,20 @@ def pytest_addoption(parser):
     parser.addoption('--h', action='store', default="enable", help='Choose headless: enable or other')
     parser.addoption('--s', action='store', default="1920,1080", help='Size window: width,height')
 
-@pytest.fixture
+
+@pytest.fixture(scope="class")
 def browser(request):
     if request.config.getoption("bn") == "remote_chrome":
         capabilities = {
             "browserName": "chrome",
             "enableVNC": False,
-            "enableVideo": False }
+            "enableVideo": False}
         url = os.environ['SELENOID_URL']
         conn = webdriver.remote.remote_connection.RemoteConnection(url, resolve_ip=False)
         print("\nstart browser for test..")
         browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities)
         yield browser
-        #этот код выполнится после завершения теста
+        # этот код выполнится после завершения теста
         print("\nquit browser..")
         browser.quit()
     elif request.config.getoption("bn") == "chrome":
@@ -36,7 +37,6 @@ def browser(request):
         print("\nstart chrome browser for test..")
         yield browser
         browser.quit()
-
 
 
 # @pytest.fixture(scope='class')
@@ -64,7 +64,7 @@ def avtorithaision_b2t(browser, login_b2t='141', password_b2t='19468персик
 def avtorithaision_b2c(browser, login_b2c='29', password_b2c='32407собор'):
     browser.get('https://57211.shot-uchi.ru/')
     login_input = wdw(browser, 15).until(EC.presence_of_element_located(avtor_page_elements.login_input)).send_keys(
-       login_b2c)
+        login_b2c)
     time.sleep(3)
     password_input = wdw(browser, 35).until(
         EC.presence_of_element_located(avtor_page_elements.password_input)).send_keys(password_b2c)
@@ -75,7 +75,7 @@ def avtorithaision_b2c(browser, login_b2c='29', password_b2c='32407собор'):
 def avtorithaision_techear(browser, login_teacher='teacher124@uchi.ru', password_teacher='1'):
     browser.get('https://57211.shot-uchi.ru/')
     login_input = wdw(browser, 15).until(EC.presence_of_element_located(avtor_page_elements.login_input)).send_keys(
-       login_teacher)
+        login_teacher)
     time.sleep(3)
     password_input = wdw(browser, 35).until(
         EC.presence_of_element_located(avtor_page_elements.password_input)).send_keys(password_teacher)
