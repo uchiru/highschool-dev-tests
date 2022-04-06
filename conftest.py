@@ -27,6 +27,7 @@ def browser(request):
         conn = webdriver.remote.remote_connection.RemoteConnection(url, resolve_ip=False)
         print("\nstart browser for test..")
         browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities)
+        browser.maximize_window()
         yield browser
         # этот код выполнится после завершения теста
         print("\nquit browser..")
@@ -34,6 +35,7 @@ def browser(request):
     elif request.config.getoption("bn") == "chrome":
         options = Options()
         browser = webdriver.Chrome(options=options)
+        browser.maximize_window()
         print("\nstart chrome browser for test..")
         yield browser
         browser.quit()
