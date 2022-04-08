@@ -174,7 +174,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         prog_click = wdw(browser, 20).until(
             (EC.presence_of_element_located(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.presence_of_element_located(payments_page_elements.buy_button)).click()
-    card = wdw(browser, 25).until(EC.presence_of_element_located(card_data_page_elements.card_num)).send_keys(
+    card = wdw(browser, 35).until(EC.presence_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 25).until(EC.presence_of_element_located(card_data_page_elements.card_date)).send_keys(
         card_data.mmyy_1)
@@ -257,12 +257,12 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
             EC.presence_of_element_located(payments_page_elements.eng_check_box)).click()
 
     else:
-        prog_click = wdw(browser, 10).until(
+        prog_click = wdw(browser, 20).until(
             (EC.presence_of_element_located(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.presence_of_element_located(payments_page_elements.buy_button)).click()
-    card = wdw(browser, 15).until(EC.presence_of_element_located(card_data_page_elements.card_num)).send_keys(
+    card = wdw(browser, 25).until(EC.presence_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
-    mmyy = wdw(browser, 15).until(EC.presence_of_element_located(card_data_page_elements.card_date)).send_keys(
+    mmyy = wdw(browser, 25).until(EC.presence_of_element_located(card_data_page_elements.card_date)).send_keys(
         card_data.mmyy_1)
     cvv = wdw(browser, 25).until(EC.presence_of_element_located(card_data_page_elements.cvv_num)).send_keys(
         card_data.cvv_1)
