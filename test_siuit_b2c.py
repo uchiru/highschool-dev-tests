@@ -9,12 +9,12 @@ class Test_head_page_elements_exists_b2c:
 
     def test_modern_byilogy_exist(self, browser):
         browser.implicitly_wait(5)
-        assert browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/biology"]'), 'biology button not exist'
+        assert len(browser.find_elements_by_css_selector(
+            '[href="http://uchi.ru/modern-subjects/high-school/biology"]')) == 1, 'biology button not exist, or more 1'
 
     def test_moder_literature_exist(self, browser):
-        assert browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/literature"]'), 'literature button not exist'
+        assert len(browser.find_elements_by_css_selector(
+            '[href="http://uchi.ru/modern-subjects/high-school/literature"]')) == 1, 'literature button not exist'
 
 
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
@@ -48,7 +48,6 @@ class Test_high_school_buys_b2c:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
-    @pytest.mark.new_code_try
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_half_year(self, browser, old_checkboxes):
         old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)
@@ -66,7 +65,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-
 
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_month(self, browser, old_checkboxes):
