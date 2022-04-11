@@ -49,12 +49,12 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(EC.presence_of_element_located(headpage_elements.full_version_button)).click()
     if choose_check_box == 'math':
-        rus_click = wdw(browser,40).until(
+        rus_click = wdw(browser, 40).until(
             EC.presence_of_element_located(payments_page_elements.rus_check_box)).click()
-        eng_click = wdw(browser,40).until(
+        eng_click = wdw(browser, 40).until(
             EC.presence_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'rus':
-        eng_click = wdw(browser,40).until(
+        eng_click = wdw(browser, 40).until(
             EC.presence_of_element_located(payments_page_elements.eng_check_box)).click()
         math_click = wdw(browser, 40).until(
             EC.presence_of_element_located(payments_page_elements.math_check_box)).click()
@@ -149,7 +149,6 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     gradusnick_click = wdw(browser, 25).until(
         EC.presence_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
     if choose_check_box == 'math':
-
         rus_click = wdw(browser, 40).until(
             EC.presence_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 40).until(
