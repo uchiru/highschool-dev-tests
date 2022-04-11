@@ -10,11 +10,11 @@ class Test_head_page_elements_exists_b2c:
     def test_modern_byilogy_exist(self, browser):
         browser.implicitly_wait(5)
         assert len(browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/biology"]')) == 1, 'biology button not exist, or more 1'
+            '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
 
     def test_moder_literature_exist(self, browser):
         assert len(browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/literature"]')) == 1, 'literature button not exist'
+            '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
 
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
