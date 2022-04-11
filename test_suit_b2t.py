@@ -20,6 +20,7 @@ class Test_head_page_elements_exists_b2t:
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
 
+@pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_high_school_buys_b2t:
 
