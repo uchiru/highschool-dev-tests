@@ -6,17 +6,18 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 
+@pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_head_page_elements_exists_b2t:
 
     def test_modern_byilogy_exist(self, browser):
         browser.implicitly_wait(5)
-        assert browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/biology"]'), 'biology button not exist'
+        assert len(browser.find_elements_by_css_selector(
+            '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
 
     def test_moder_literature_exist(self, browser):
-        assert browser.find_elements_by_css_selector(
-            '[href="http://uchi.ru/modern-subjects/high-school/literature"]'), 'literature button not exist'
+        assert len(browser.find_elements_by_css_selector(
+            '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
 
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
