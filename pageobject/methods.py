@@ -171,7 +171,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
             EC.element_to_be_clickable(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 40).until(
             EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
-    else:
+    elif choose_check_box == 'all_type':
         prog_click = wdw(browser, 40).until(
             (EC.element_to_be_clickable(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.element_to_be_clickable(payments_page_elements.buy_button)).click()
