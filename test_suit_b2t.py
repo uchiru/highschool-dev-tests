@@ -62,7 +62,6 @@ class Test_high_school_buys_b2t:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
-    @pytest.mark.new_code_try
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_month(self, browser, checkboxes):
         new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
@@ -72,7 +71,6 @@ class Test_high_school_buys_b2t:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
-    @pytest.mark.new_code_try
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_month(self, browser, old_checkboxes):
         old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)
