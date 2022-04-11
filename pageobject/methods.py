@@ -258,7 +258,6 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
             EC.element_to_be_clickable(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 40).until(
             EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
-
     else:
         prog_click = wdw(browser, 40).until(
             (EC.element_to_be_clickable(payments_page_elements.prog_check_box))).click()
