@@ -27,7 +27,7 @@ class payments_page_elements():
 
 
 class card_data_page_elements():
-    card_num = (By.ID, 'cardNumber')
+    card_num = (By.CSS_SELECTOR, '#cardNumber')
     card_date = (By.ID, 'expDateMonthYear')
     cvv_num = (By.ID, 'cvv')
     card_buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="submit"]')
