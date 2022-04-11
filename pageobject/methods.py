@@ -7,11 +7,11 @@ import time
 
 def skip_over_checkbox(browser):
     math_click = wdw(browser, 40).until(
-        EC.presence_of_element_located(payments_page_elements.math_check_box)).click()
+        EC.element_to_be_clickable(payments_page_elements.math_check_box)).click()
     rus_click = wdw(browser, 40).until(
-        EC.presence_of_element_located(payments_page_elements.rus_check_box)).click()
+        EC.element_to_be_clickable(payments_page_elements.rus_check_box)).click()
     eng_click = wdw(browser, 40).until(
-        EC.presence_of_element_located(payments_page_elements.eng_check_box)).click()
+        EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
 
 
 def new_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
