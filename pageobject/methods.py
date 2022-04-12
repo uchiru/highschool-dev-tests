@@ -111,18 +111,12 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     gradusnick_click = wdw(browser, 30).until(
         EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click()
     if choose_checkbox == 'bio':
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         modern_biology_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_biology_check_box)).click()
     elif choose_checkbox == 'lit':
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         literature_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_literature_check_box)).click()
     else:
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         modern_biology_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_biology_check_box)).click()
         literature_click = wdw(browser, 30).until(
@@ -156,10 +150,10 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         eng_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'rus':
-        eng_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
         math_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.math_check_box)).click()
+        eng_click = wdw(browser, 30).until(
+            EC.element_to_be_clickable(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'eng':
         math_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.math_check_box)).click()
@@ -178,7 +172,6 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         prog_click = wdw(browser, 30).until(
             (EC.element_to_be_clickable(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.element_to_be_clickable(payments_page_elements.buy_button)).click()
-    browser.implicitly_wait(30)
     card = wdw(browser, 30).until(EC.element_to_be_clickable(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.element_to_be_clickable(card_data_page_elements.card_date)).send_keys(
@@ -200,18 +193,12 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     gradusnick_click = wdw(browser, 30).until(
         EC.element_to_be_clickable(payments_page_elements.gradusnik_month)).click()
     if choose_checkbox == 'bio':
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         modern_biology_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_biology_check_box)).click()
     elif choose_checkbox == 'lit':
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         literature_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_literature_check_box)).click()
     else:
-        half_year_click = wdw(browser, 30).until(
-            EC.element_to_be_clickable(payments_page_elements.gradusnik_halfyear)).click
         modern_biology_click = wdw(browser, 30).until(
             EC.element_to_be_clickable(payments_page_elements.modern_biology_check_box)).click()
         literature_click = wdw(browser, 30).until(
