@@ -22,8 +22,8 @@ class payments_page_elements():
     prog_check_box = (By.XPATH,'//span[text()="Программирование"]')
     plan_check_box = (By.XPATH,'//span[text()="Планирование"]')
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
-    gradusnik_halfyear = (By.CSS_SELECTOR, '[data-qa-marker ="полгода"]')
-    gradusnik_month = (By.CSS_SELECTOR, '[data-qa-marker ="месяц"]')
+    gradusnik_halfyear = (By.CSS_SELECTOR, 'button[data-qa-marker ="полгода"]')
+    gradusnik_month = (By.CSS_SELECTOR, 'button[data-qa-marker ="месяц"]')
 
 
 class card_data_page_elements():
