@@ -7,10 +7,8 @@ class avtor_page_elements():
     enter_button = (By.CSS_SELECTOR, '[value = "Войти"]')
 
 
-
 class headpage_elements():
     full_version_button = (By.CSS_SELECTOR, '[data-testid="headbar-fullversion"]')
-    biology = (By.CSS_SELECTOR, '[data-highlight-name="content_bio"]')
 
 
 class payments_page_elements():
@@ -19,8 +17,8 @@ class payments_page_elements():
     math_check_box = (By.XPATH, '//span[text()="Математика"]')
     rus_check_box = (By.XPATH, '//span[text()="Русский язык"]')
     eng_check_box = (By.XPATH, '//span[text()="Английский язык"]')
-    prog_check_box = (By.XPATH,'//span[text()="Программирование"]')
-    plan_check_box = (By.XPATH,'//span[text()="Планирование"]')
+    prog_check_box = (By.XPATH, '//span[text()="Программирование"]')
+    plan_check_box = (By.XPATH, '//span[text()="Планирование"]')
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
     gradusnik_halfyear = (By.CSS_SELECTOR, '[data-qa-marker ="полгода"]')
     gradusnik_month = (By.CSS_SELECTOR, '[data-qa-marker ="месяц"]')
@@ -40,7 +38,3 @@ class cloud_page_elements():
 
 class congrat_page_elements():
     congrat_button = (By.CSS_SELECTOR, 'a.paid__btn')
-
-
-
-
