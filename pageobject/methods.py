@@ -6,7 +6,6 @@ import time
 
 
 def skip_over_checkbox(browser):
-    browser.implicitly_wait(10)
     math_click = wdw(browser, 40).until(
         EC.element_to_be_clickable(payments_page_elements.math_check_box)).click()
     rus_click = wdw(browser, 40).until(
