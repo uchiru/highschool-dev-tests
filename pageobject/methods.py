@@ -88,7 +88,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
         prog_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
-    browser.implicitly_wait(15)
+    browser.implicitly_wait(10)
     card = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
@@ -121,7 +121,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
             EC.visibility_of_element_located(payments_page_elements.modern_literature_check_box)).click()
     skip_over_checkbox(browser)
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
-    browser.implicitly_wait(15)
+    browser.implicitly_wait(10)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
