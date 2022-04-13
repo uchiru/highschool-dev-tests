@@ -73,7 +73,6 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
-
     elif choose_check_box == 'plan':
         plan_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.plan_check_box))).click()
@@ -83,7 +82,6 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
-
     else:
         plan_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.plan_check_box))).click()
@@ -251,7 +249,6 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
-
     else:
         prog_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
