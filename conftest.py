@@ -27,7 +27,7 @@ def browser(request):
         conn = webdriver.remote.remote_connection.RemoteConnection(url, resolve_ip=False)
         print("\nstart browser for test..")
         browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities)
-        browser.maximize_window()
+        browser.set_window_size(1920, 1080)
         yield browser
         # этот код выполнится после завершения теста
         print("\nquit browser..")
