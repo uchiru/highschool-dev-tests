@@ -21,6 +21,7 @@ def browser(request):
     if request.config.getoption("bn") == "remote_chrome":
         capabilities = {
             "browserName": "chrome",
+            "version": "99",
             "enableVNC": False,
             "enableVideo": False}
         url = os.environ['SELENOID_URL']
