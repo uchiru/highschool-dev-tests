@@ -122,7 +122,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     skip_over_checkbox(browser)
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
     browser.implicitly_wait(15)
-    card = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
+    card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
         card_data.mmyy_1)
@@ -148,10 +148,10 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'rus':
-        eng_click = wdw(browser, 30).until(
-            EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
         math_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
+        eng_click = wdw(browser, 30).until(
+            EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'eng':
         math_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
@@ -166,12 +166,12 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
-    else:
+    elif choose_check_box == 'all_types':
         prog_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
     browser.implicitly_wait(15)
-    card = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
+    card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
         card_data.mmyy_1)
