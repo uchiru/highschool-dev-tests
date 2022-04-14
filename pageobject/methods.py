@@ -149,9 +149,9 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         eng_click = wdw(browser, 25).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'rus':
-        math_click = wdw(browser, 30).until(
+        math_click = wdw(browser, 35).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
-        eng_click = wdw(browser, 30).until(
+        eng_click = wdw(browser, 35).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'eng':
         math_click = wdw(browser, 25).until(
