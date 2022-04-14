@@ -159,14 +159,14 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         rus_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
     elif choose_check_box == 'prog':
-        prog_click = wdw(browser, 30).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
         math_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
         rus_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
+        prog_click = wdw(browser, 30).until(
+            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
     elif choose_check_box == 'all_types':
         prog_click = wdw(browser, 30).until(
             (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
@@ -193,7 +193,6 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
     if choose_checkbox == 'bio':
-        browser.implicitly_wait(5)
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
     elif choose_checkbox == 'lit':
