@@ -4,6 +4,7 @@ from constance import *
 import time
 
 
+@pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_head_page_elements_exists_b2c:
@@ -18,6 +19,7 @@ class Test_head_page_elements_exists_b2c:
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
 
+@pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_high_school_buys_b2c:
