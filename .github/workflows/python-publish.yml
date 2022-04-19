@@ -39,3 +39,5 @@ jobs:
           pytest ${args} --bn ${{ matrix.browser }}
       env:
         SELENOID_URL: http://localhost:4444/wd/hub
+        
+ 

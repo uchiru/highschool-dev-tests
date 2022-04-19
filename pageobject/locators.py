@@ -38,3 +38,12 @@ class cloud_page_elements():
 
 class congrat_page_elements():
     congrat_button = (By.CSS_SELECTOR, 'a.paid__btn')
+
+
+class teachers_elements:
+    subjects_list_button = (By.CSS_SELECTOR, '[data-qa-marker="editSubjects"]')
+    bio_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-32"]')
+    lit_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-36"]')
+    save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
+    header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/stats/main"]')
+    blyadskiy_pop_up_button = (By.XPATH, '//div[text()="Далее"]')
