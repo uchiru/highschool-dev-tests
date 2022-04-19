@@ -18,7 +18,6 @@ class Test_head_page_elements_exists_b2c:
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
-
 @pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
