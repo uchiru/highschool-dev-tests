@@ -280,7 +280,8 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
 
 def teach_sub_management(browser, choose_subjects):
     browser.get('https://57211.shot-uchi.ru/teachers/lk/main')
-    subjects_list = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
+    subjects_list = wdw(browser, 20).until(
+        EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
     if choose_subjects == 'bio':
         bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
     elif choose_subjects == 'lit':
@@ -288,9 +289,13 @@ def teach_sub_management(browser, choose_subjects):
     else:
         bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
         lit_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
-    save_change_click = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
+    save_change_click = wdw(browser, 15).until(
+        EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
     try:
-        continue_button = wdw(browser,15).until(EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
+        continue_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
     except:
         print("Pop up lose")
-    header_click = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
+    header_click = wdw(browser, 15).until(
+        EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
+    browser.implicitly_wait(5)
