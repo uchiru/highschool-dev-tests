@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 @pytest.mark.usefixtures('browser', 'avtorithaision_techear')
 class Test_teacher_sub_management:
 
+    @pytest.mark.teach_set
     @pytest.mark.parametrize('checkboxes', teach_subjects)
     def test_sub_management(self, browser, checkboxes):
         teach_sub_management(browser, checkboxes)
