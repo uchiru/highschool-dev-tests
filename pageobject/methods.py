@@ -293,6 +293,4 @@ def teach_sub_management(browser, choose_subjects):
         continue_button = wdw(browser,15).until(EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
     except:
         print("Pop up lose")
-    time.sleep(5)
     header_click = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
-    time.sleep(5)
