@@ -13,8 +13,19 @@ class Test_teacher_sub_management:
     def test_sub_management(self, browser, checkboxes):
         teach_sub_management(browser, checkboxes)
         if checkboxes == 'bio':
-            assert len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_biology"]')) == 0, 'biology missing at progrrams list'
+            assert len(browser.find_elements_by_css_selector(
+                '[data-qa-marker="menu-modern_biology"]')) == 0, 'biology missing at progrrams list'
         elif checkboxes == 'lit':
-            assert len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_literature"]')) == 0, 'literature missing at programs list'
+            assert len(browser.find_elements_by_css_selector(
+                '[data-qa-marker="menu-modern_literature"]')) == 0, 'literature missing at programs list'
         else:
-            assert len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_biology"]')) == 1 and len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_literature"]')) == 1, 'biology or literature missing at progrrams list'
+            assert len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_biology"]')) == 1 and len(
+                browser.find_elements_by_css_selector(
+                    '[data-qa-marker="menu-modern_literature"]')) == 1, 'biology or literature missing at progrrams list'
+
+
+class Test_teacher_with_registraithion:
+
+    @pytest.mark.teach_set
+    def test_choose_exists_classes(self, browser):
+        pass

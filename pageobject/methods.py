@@ -3,6 +3,15 @@ from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as EC
 from constance import *
 import time
+import random
+import string
+
+
+def generate_email(length):
+    letters = string.ascii_lowercase
+    rand_string = ''.join(random.choice(letters) for i in range(length))
+    generate_email(8)
+    email = (f'{rand_string}@gmail.com')
 
 
 def skip_over_checkbox(browser):
@@ -237,10 +246,10 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
         browser.implicitly_wait(5)
         rus_click = wdw(browser, 25).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
-        eng_click = wdw(browser, 25).until(
+        eng_click = wdw(browser, 35).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'rus':
-        eng_click = wdw(browser, 25).until(
+        eng_click = wdw(browser, 35).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
         math_click = wdw(browser, 25).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
@@ -299,3 +308,8 @@ def teach_sub_management(browser, choose_subjects):
     header_click = wdw(browser, 15).until(
         EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
     browser.implicitly_wait(5)
+
+
+def regist_and_choose_classes(browser):
+    browser.get('https://57211.shot-uchi.ru')
+
