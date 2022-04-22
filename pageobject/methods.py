@@ -121,6 +121,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     gradusnick_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
+    browser.implicitly_wait(10)
     if choose_checkbox == 'bio':
         browser.implicitly_wait(5)
         modern_biology_click = wdw(browser, 25).until(
@@ -157,6 +158,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     gradusnick_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
+    browser.implicitly_wait(10)
     if choose_check_box == 'math':
         rus_click = wdw(browser, 25).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
@@ -207,6 +209,7 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     gradusnick_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
+    browser.implicitly_wait(10)
     if choose_checkbox == 'bio':
         modern_biology_click = wdw(browser, 25).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
@@ -242,6 +245,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     gradusnick_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
+    browser.implicitly_wait(10)
     if choose_check_box == 'math':
         browser.implicitly_wait(5)
         rus_click = wdw(browser, 25).until(
