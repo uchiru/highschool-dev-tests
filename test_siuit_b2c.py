@@ -18,11 +18,10 @@ class Test_head_page_elements_exists_b2c:
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
-
 @pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
-class Test_high_school_buys_b2c_year:
+class Test_high_school_buys_b2c:
 
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_year(self, browser, checkboxes):
@@ -43,12 +42,6 @@ class Test_high_school_buys_b2c_year:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
-
-@pytest.mark.set_b2c
-@pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
-class Test_high_school_buys_b2c_halfyear:
-
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_half_year(self, browser, checkboxes):
         new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
@@ -67,12 +60,6 @@ class Test_high_school_buys_b2c_halfyear:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-
-
-@pytest.mark.set_b2c
-@pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
-class Test_high_school_buys_b2c_month:
 
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_month(self, browser, checkboxes):
