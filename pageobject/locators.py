@@ -22,6 +22,7 @@ class payments_page_elements:
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
     gradusnik_halfyear = (By.CSS_SELECTOR, '[data-qa-marker ="полгода"]')
     gradusnik_month = (By.CSS_SELECTOR, '[data-qa-marker ="месяц"]')
+    all_inclusive_button = (By.CSS_SELECTOR, '[data-qa-marker="buy-bundle"]')
 
 
 class card_data_page_elements:
@@ -38,6 +39,7 @@ class cloud_page_elements():
 
 class congrat_page_elements():
     congrat_button = (By.CSS_SELECTOR, 'a.paid__btn')
+    all_inclusive_congrat_button = (By.CSS_SELECTOR, 'a.btn.btn-blue')
 
 
 class teachers_elements:
