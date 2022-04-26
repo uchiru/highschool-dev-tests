@@ -362,7 +362,7 @@ class Half_year_methods:
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
-        prog_click = wdw(browser, 20).until(
+        prog_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
         bio_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()

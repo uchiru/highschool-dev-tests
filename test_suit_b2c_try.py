@@ -108,7 +108,7 @@ class Test_shopping_year:
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_shopping_half_year:
 
-    def test_math_year(self, browser):
+    def test_math_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_half_year(browser, card_1, mmyy_1, cvv_1, paypass_1)
         congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
