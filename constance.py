@@ -8,8 +8,8 @@ cvv_1 = '111'
 paypass_1 = '4'
 
 
-class card_data():
-    card_1 = '4242 4242 4242 4242'
-    mmyy_1 = '12/22'
+class card_data:
+    card_1 = '2200 0000 0000 0004'
+    mmyy_1 = '12/26'
     cvv_1 = '111'
     paypass_1 = '4'
