@@ -28,4 +28,4 @@ class Test_teacher_with_registraithion:
 
     @pytest.mark.teach_set
     def test_choose_exists_classes(self, browser):
-        pass
+        regist_and_choose_classes(browser)
