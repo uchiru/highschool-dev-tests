@@ -17,7 +17,6 @@ class payments_page_elements:
     math_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-math"]')
     rus_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-russian"]')
     eng_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-english"]')
-    env_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-environment"]')
     prog_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-informatics"]')
     plan_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-plan"]')
     buy_button = (By.CSS_SELECTOR, '[data-qa-marker ="buy-selected-products"]')
