@@ -10,8 +10,8 @@ import string
 def generate_email(length):
     letters = string.ascii_lowercase
     rand_string = ''.join(random.choice(letters) for i in range(length))
-    generate_email(8)
     email = (f'{rand_string}@gmail.com')
+    return email
 
 
 def skip_over_checkbox(browser):
@@ -77,7 +77,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
     elif choose_check_box == 'prog':
         prog_click = wdw(browser, 20).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
         math_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
         rus_click = wdw(browser, 20).until(
@@ -86,7 +86,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     elif choose_check_box == 'plan':
         plan_click = wdw(browser, 20).until(
-            (EC.visibility_of_element_located(payments_page_elements.plan_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.plan_check_box)).click()
         math_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
         rus_click = wdw(browser, 20).until(
@@ -95,9 +95,9 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     else:
         plan_click = wdw(browser, 20).until(
-            (EC.visibility_of_element_located(payments_page_elements.plan_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.plan_check_box)).click()
         prog_click = wdw(browser, 20).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
     buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
     browser.implicitly_wait(10)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
@@ -182,10 +182,10 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         eng_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
         prog_click = wdw(browser, 30).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
     elif choose_check_box == 'all_types':
         prog_click = wdw(browser, 25).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
     buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
     browser.implicitly_wait(15)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
@@ -264,7 +264,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
     elif choose_check_box == 'prog':
         prog_click = wdw(browser, 25).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
         math_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.math_check_box)).click()
         rus_click = wdw(browser, 25).until(
@@ -273,7 +273,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
             EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
     else:
         prog_click = wdw(browser, 25).until(
-            (EC.visibility_of_element_located(payments_page_elements.prog_check_box))).click()
+            EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
     buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
     browser.implicitly_wait(15)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
@@ -316,4 +316,13 @@ def teach_sub_management(browser, choose_subjects):
 
 def regist_and_choose_classes(browser):
     browser.get('https://57211.shot-uchi.ru')
+    regist_click = wdw(browser, 10).until(EC.visibility_of_element_located(registraition_elements.regist_button)).click()
+    choose_role_button = wdw(browser, 10).until(EC.visibility_of_element_located(registraition_elements.teach_role_button)).click()
+    teach_email_input = wdw(browser, 10).until(
+        EC.visibility_of_element_located(registraition_elements.teach_email_box)).send_keys(generate_email(7))
+    teach_password_input = wdw(browser, 10).until(EC.visibility_of_element_located(registraition_elements.teach_password_box)).click()
+    teech_agree_click = wdw(browser, 10).until(EC.visibility_of_element_located(registraition_elements.teach_privacy_check)).click()
+
+
+
 
