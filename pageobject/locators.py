@@ -43,13 +43,18 @@ class congrat_page_elements():
 
 
 class teachers_elements:
-    subjects_list_button = (By.CSS_SELECTOR, '[data-qa-marker="edit-subjects"]')
+    subjects_list_button = (By.CSS_SELECTOR, '[style="margin-left: 6px;"]')
     bio_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-32"]')
     lit_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-36"]')
     save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
     header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/stats/main"]')
     blyadskiy_pop_up_button = (By.XPATH, '//div[text()="Далее"]')
-
+    after_regist_pop_up_button = (By.CSS_SELECTOR, '[data-qa-marker="onboarding-button-next"]')
+    biology_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')
+    literature_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')
+    group_list = (By.CSS_SELECTOR, '[data-name="classlist"]')
+    class_settings_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/class_books/1848357/students"]')
+    marathon_pop_up = (By.CSS_SELECTOR, 'img.bottom_bar__marathon-hint')
 
 class registraition_elements:
     regist_button = (By.CSS_SELECTOR, '[data-qa-marker="root-page-registration-link"]')
@@ -58,4 +63,24 @@ class registraition_elements:
     teach_password_box = (By.CSS_SELECTOR, '[data-qa-marker="step-password"]')
     teach_privacy_check = (By.CSS_SELECTOR, '[data-qa-marker="checked-privacy"]')
     teach_email_letter_button = (By.CSS_SELECTOR, '[data-qa-marker="next-step-email-password"]')
+    teach_last_name_box = (By.CSS_SELECTOR, '[data-qa-marker="step-lastName"]')
+    teach_name_box = (By.CSS_SELECTOR, '[data-qa-marker="step-name"]')
+    teach_middle_name_box = (By.CSS_SELECTOR, '[data-qa-marker="step-middleName"]')
+    teach_phone_box = (By.CSS_SELECTOR, '[data-qa-marker="step-phone"]')
+    teach_fio_letter_button = (By.CSS_SELECTOR, '[data-qa-marker="next-step-fio"]')
+    teach_region_list = (By.CSS_SELECTOR, '[data-qa-marker="select-region"]')
+    teach_region_name = (By.CSS_SELECTOR, '[data-qa-marker="Москва"]')
+    teach_school_list = (By.CSS_SELECTOR, '[data-qa-marker="select-school"]')
+    teach_school_name = (By.CSS_SELECTOR, '[data-qa-marker="Государственное бюд3жетное общеобразовательное учреждение города Москвы средняя общеобразовательная школа №666"]')
+    teach_school_later_button = (By.CSS_SELECTOR, '[data-qa-marker="next-step-school"]')
+    teach_class_box = (By.CSS_SELECTOR, '[data-qa-marker="select-class-number"]')
+    teach_class_level = (By.CSS_SELECTOR, '[data-qa-marker="5 класс"]')
+    literature_checkbox = (By.CSS_SELECTOR, '[data-qa-marker="step-subject-id-36"]')
+    biology_checbox = (By.CSS_SELECTOR, '[data-qa-marker="step-subject-id-32"]')
+    teach_class_letter_button = (By.CSS_SELECTOR, '[data-qa-marker="next-step-add-class"]')
+    option_biology_class = (By.CSS_SELECTOR, '[data-qa-marker="select-my-class-34"]')
+    option_literature_class = (By.CSS_SELECTOR, '[data-qa-marker="select-my-class-38"]')
+    class_option_letter_button = (By.CSS_SELECTOR, '[data-qa-marker="next-step-group-select"]')
+
+
 
