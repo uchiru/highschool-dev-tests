@@ -10,7 +10,7 @@ import time
 class Test_head_page_elements_exists_b2c:
 
     def test_modern_byilogy_exist(self, browser):
-        browser.implicitly_wait(5)
+        browser.implicitly_wait(15)
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
 
