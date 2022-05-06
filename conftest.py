@@ -38,7 +38,7 @@ def browser(request):
         browser.maximize_window()
         print("\nstart chrome browser for test..")
         yield browser
-        #browser.quit()
+        browser.quit()
 
 
 # @pytest.fixture(scope='class')
