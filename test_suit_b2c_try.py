@@ -18,6 +18,13 @@ class Test_head_page_elements_exists_b2c:
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
+    def test_moder_geografy_exist(self, browser):
+        assert len(browser.find_elements_by_css_selector(
+            '[data-qa-marker="content_geo"]')) == 1, 'literature button not exist'
+
+    def test_moder_history_exist(self, browser):
+        assert len(browser.find_elements_by_css_selector(
+            '[data-qa-marker="content_hist"]')) == 1, 'literature button not exist'
 
 @pytest.mark.set_new_b2c
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')

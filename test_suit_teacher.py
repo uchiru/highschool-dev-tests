@@ -8,6 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 @pytest.mark.usefixtures('browser', 'avtorithaision_techear')
 class Test_teacher_sub_management:
 
+    @pytest.mark.regress
     @pytest.mark.teach_set
     @pytest.mark.parametrize('checkboxes', teach_subjects)
     def test_sub_management(self, browser, checkboxes):
@@ -24,8 +25,9 @@ class Test_teacher_sub_management:
                     '[data-qa-marker="menu-modern_literature"]')) == 1, 'biology or literature missing at progrrams list'
 
 
-class Test_teacher_with_registraithion:
+class Test_teacher_with_registration:
 
+    @pytest.mark.regress
     @pytest.mark.teach_set
     def test_choose_exists_classes(self, browser):
         regist_and_choose_classes(browser)
