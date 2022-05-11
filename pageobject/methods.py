@@ -56,7 +56,7 @@ def new_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):
@@ -117,7 +117,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
@@ -155,7 +155,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):
@@ -208,7 +208,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
@@ -245,7 +245,7 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):
@@ -299,7 +299,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
-    time.sleep(10)
+    time.sleep(15)
 
 
 def teach_sub_management(browser, choose_subjects):
@@ -412,4 +412,4 @@ def regist_and_choose_classes(browser):
             EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
     except:
         print("Pop up lose")
-    time.sleep(10)
+    time.sleep(15)
