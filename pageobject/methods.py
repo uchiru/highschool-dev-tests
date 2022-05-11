@@ -24,6 +24,29 @@ def skip_over_checkbox(browser):
         EC.visibility_of_element_located(payments_page_elements.eng_check_box)).click()
 
 
+def buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1):
+    browser.get('https://57211.shot-uchi.ru/profile/students')
+    full_version = wdw(browser, 20).until(
+        EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    choose_all_inclusive = wdw(browser, 15).until(
+        EC.visibility_of_element_located(payments_page_elements.all_inclusive_button)).click()
+    card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
+        card_data.card_1)
+    mmyy = wdw(browser, 20).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
+        card_data.mmyy_1)
+    cvv = wdw(browser, 20).until(EC.visibility_of_element_located(card_data_page_elements.cvv_num)).send_keys(
+        card_data.cvv_1)
+    card_buy_click = wdw(browser, 20).until(
+        EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
+    browser.implicitly_wait(10)
+    paypass = wdw(browser, 20).until(
+        EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
+    paypass_click = wdw(browser, 20).until(
+        EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
+    paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.all_inclusive_congrat_button))
+
+
+
 def new_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
@@ -241,7 +264,8 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     card_buy_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
     browser.implicitly_wait(10)
-    paypass = wdw(browser, 40).until(EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
+    paypass = wdw(browser, 40).until(EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(
+        card_data.paypass_1)
     paypass_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
@@ -319,7 +343,7 @@ def teach_sub_management(browser, choose_subjects):
         EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
     try:
         continue_button = wdw(browser, 15).until(
-            EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
+            EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
     except:
         print("Pop up lose")
     header_click = wdw(browser, 15).until(
@@ -366,7 +390,8 @@ def regist_and_choose_classes(browser):
         EC.visibility_of_element_located(registraition_elements.teach_school_list)).send_keys('666')
     teach_school_option = wdw(browser, 40).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_name)).click()
-    target = browser.find_element_by_css_selector('[data-qa-marker="next-step-school"]').location_once_scrolled_into_view
+    target = browser.find_element_by_css_selector(
+        '[data-qa-marker="next-step-school"]').location_once_scrolled_into_view
     teach_school_letter_click = wdw(browser, 10).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_later_button)).click()
     teach_class_level = wdw(browser, 10).until(
@@ -402,14 +427,15 @@ def regist_and_choose_classes(browser):
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
     try:
-        marathon_button = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.marathon_pop_up)).click()
+        marathon_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.marathon_pop_up)).click()
     except:
         print("Pop up lose")
     save_change_click = wdw(browser, 15).until(
         EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
     try:
         continue_button = wdw(browser, 15).until(
-            EC.visibility_of_element_located(teachers_elements.blyadskiy_pop_up_button)).click()
+            EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
     except:
         print("Pop up lose")
     time.sleep(15)
