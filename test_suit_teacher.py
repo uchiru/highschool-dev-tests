@@ -31,3 +31,6 @@ class Test_teacher_with_registration:
     @pytest.mark.teach_set
     def test_choose_exists_classes(self, browser):
         regist_and_choose_classes(browser)
+        empty_name = browser.find_element_by_css_selector('[data-qa-marker="add-student-last-name"]').text
+        print(empty_name)
+        assert empty_name == '', "not empty group"
