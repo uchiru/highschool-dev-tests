@@ -5,8 +5,7 @@ import time
 
 
 @pytest.mark.old_way
-@pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_head_page_elements_exists_b2c:
 
     def test_modern_byilogy_exist(self, browser):
@@ -28,7 +27,7 @@ class Test_head_page_elements_exists_b2c:
 
 
 @pytest.mark.old_way
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_shopping_year:
 
     def test_all_inclussive(self, browser):
@@ -113,7 +112,7 @@ class Test_shopping_year:
 
 
 @pytest.mark.old_way
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_shopping_half_year:
 
     def test_math_half_year(self, browser):
@@ -178,7 +177,7 @@ class Test_shopping_half_year:
 
 
 @pytest.mark.old_way
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_shopping_month:
 
     def test_math_month(self, browser):
