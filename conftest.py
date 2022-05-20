@@ -28,7 +28,7 @@ def browser(request):
         url = os.environ['SELENOID_URL']
         conn = webdriver.remote.remote_connection.RemoteConnection(url, resolve_ip=False)
         print("\nstart browser for test..")
-        browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities, chrome_options=chrome_options)
+        browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities, options=chrome_options)
         browser.set_window_size(1920, 1080)
         yield browser
         # этот код выполнится после завершения теста
