@@ -22,6 +22,7 @@ def browser(request):
         chrome_options = Options()
         chrome_options.add_argument('--no-sandbox')
         chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--headless")
         capabilities = {
             "browserName": "chrome",
             "enableVNC": False,
