@@ -4,6 +4,7 @@ from constance import *
 import time
 
 
+@pytest.mark.new_subjects
 @pytest.mark.old_way
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_head_page_elements_exists_b2c:
