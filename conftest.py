@@ -21,6 +21,7 @@ def browser(request):
     if request.config.getoption("bn") == "remote_chrome":
         chrome_options = Options()
         chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument("--disable-dev-shm-usage")
         capabilities = {
             "browserName": "chrome",
             "enableVNC": False,
