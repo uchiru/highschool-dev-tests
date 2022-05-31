@@ -19,6 +19,10 @@ def pytest_addoption(parser):
 @pytest.fixture(scope="class")
 def browser(request):
     if request.config.getoption("bn") == "remote_chrome":
+        chrome_options = Options()
+        chrome_options.add_argument('--no-sandbox')
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--headless")
         capabilities = {
             "browserName": "chrome",
             "enableVNC": False,
@@ -26,7 +30,7 @@ def browser(request):
         url = os.environ['SELENOID_URL']
         conn = webdriver.remote.remote_connection.RemoteConnection(url, resolve_ip=False)
         print("\nstart browser for test..")
-        browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities)
+        browser = webdriver.Remote(command_executor=conn, desired_capabilities=capabilities, options=chrome_options)
         browser.set_window_size(1920, 1080)
         yield browser
         # этот код выполнится после завершения теста

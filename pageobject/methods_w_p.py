@@ -492,8 +492,7 @@ class Month_methods:
     def buy_math_rus_eng_month(self, browser, card_1, mmyy_1, cvv_1,
                                    paypass_1):  # покупка математики, русского и английского на год
         browser.get('https://57211.shot-uchi.ru/profile/students')
-        full_version = wdw(browser, 20).until(
-            EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+        full_version = wdw(browser, 20).until(EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
         buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
@@ -600,3 +599,5 @@ class Month_methods:
         paypass_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(cloud_page_elements.paypass_button)).click()
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
+
+

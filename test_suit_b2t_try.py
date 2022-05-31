@@ -4,11 +4,13 @@ from constance import *
 import time
 
 
+@pytest.mark.new_subjects
 @pytest.mark.old_way
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
 class Test_head_page_elements_exists_b2c:
 
     def test_modern_byilogy_exist(self, browser):
+        browser.get('https://57211.shot-uchi.ru/profile/students')
         browser.implicitly_wait(5)
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
