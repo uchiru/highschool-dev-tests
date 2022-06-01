@@ -12,6 +12,8 @@ class headpage_elements:
 
 
 class payments_page_elements:
+    geo_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_geo"]')
+    history_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_history"]')
     modern_biology_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_biology"]')
     modern_literature_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_literature"]')
     math_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-math"]')

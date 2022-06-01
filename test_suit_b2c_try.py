@@ -6,7 +6,6 @@ import time
 
 @pytest.mark.new_subjects
 @pytest.mark.old_way
-@pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_head_page_elements_exists_b2c:
 

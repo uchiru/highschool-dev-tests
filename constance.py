@@ -1,5 +1,5 @@
 teach_subjects = ['bio', 'lit', 'all_checks']  # список чекбоксов выбираемых на странице предметов преподаваемых учителем
-new_subjects = ['bio', 'lit', 'biolit']  # список чекбоксов выбираемых на странице тарифов
+new_subjects = ['bio', 'lit', 'hist', 'geo', 'all_types']  # список чекбоксов выбираемых на странице тарифов
 old_subjects = ['math', 'rus', 'eng', 'prog', 'plan', 'all_type']
 old_subjects_not_year = ['math', 'rus', 'eng', 'prog', 'all_type']
 card_1 = '4242 4242 4242 4242'
