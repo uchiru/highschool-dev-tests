@@ -4,9 +4,9 @@ from constance import *
 import time
 
 
-@pytest.mark.set_b2c
+@pytest.mark.set_7th_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_7th')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
 class Test_head_page_elements_exists_b2c_7th:
 
     def test_modern_byilogy_exist(self, browser):
@@ -31,9 +31,9 @@ class Test_head_page_elements_exists_b2c_7th:
             '[data-qa-marker="content_soc"]')) == 1, 'society button not exist'
 
 
-@pytest.mark.set_b2c
+@pytest.mark.set_7th_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_7th')
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
 class Test_high_school_buys_b2c_7th:
 
     @pytest.mark.new_code_try
@@ -77,7 +77,6 @@ class Test_high_school_buys_b2c_7th:
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
         time.sleep(5)
 
-    @pytest.mark.b2c_half_year
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_half_year(self, browser, old_checkboxes):
         old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)

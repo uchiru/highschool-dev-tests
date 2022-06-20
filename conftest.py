@@ -78,7 +78,7 @@ def avtorithaision_b2c(browser, login_b2c='29', password_b2c='32407собор'):
 
 
 @pytest.fixture(scope='class')
-def avtorithaision_b2c_7th(browser, login_b2c='666', password_b2c='цветы34729'):
+def avtorithaision_b2t_7th(browser, login_b2c='666', password_b2c='цветы34729'):
     browser.get('https://57211.shot-uchi.ru/')
     login_input = wdw(browser, 15).until(EC.presence_of_element_located(avtor_page_elements.login_input)).send_keys(
         login_b2c)

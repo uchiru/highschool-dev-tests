@@ -140,7 +140,7 @@ def new_subjects_year_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):
+def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box): # ученик старые предметы
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -200,7 +200,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
+def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox): # Ученик 5й класс
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -248,7 +248,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
+def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox): # Ученик 7й класс
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -301,7 +301,7 @@ def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):
+def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box): # ученик старые предметы
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -347,7 +347,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
+def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox): # ученик 5й класс
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -394,7 +394,7 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
 
-def new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox):
+def new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox): # ученик 7йкласс
     browser.get('https://57211.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
@@ -494,18 +494,17 @@ def teach_sub_management(browser, choose_subjects):  #учитель-5й кла�
         EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
     if choose_subjects == 'bio':
         bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
-    elif choose_subjects == 'geo':
-        geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
-    elif choose_subjects == 'hist':
-        hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
+    # elif choose_subjects == 'geo':
+    #     geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+    # elif choose_subjects == 'hist':
+    #     hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     elif choose_subjects == 'lit':
         lit_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
     else:
         bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
         lit_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
-        geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
-        hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
-
+        # geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+        # hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
     save_change_click = wdw(browser, 15).until(
@@ -586,7 +585,7 @@ def regist_and_choose_classes(browser):     #учитель-5й класс
     browser.implicitly_wait(20)
     try:
         continue_button = wdw(browser, 15).until(
-            EC.visibility_of_element_located(teachers_elements.after_regist_pop_up_button)).click()
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
     except:
         print("Pop up lose")
     have_biology = wdw(browser, 10).until(EC.visibility_of_element_located(teachers_elements.biology_at_menu))
@@ -607,3 +606,4 @@ def regist_and_choose_classes(browser):     #учитель-5й класс
             EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
     except:
         print("Pop up lose")
+

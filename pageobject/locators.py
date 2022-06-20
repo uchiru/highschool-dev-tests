@@ -55,6 +55,7 @@ class teachers_elements:
     save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
     header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/stats/main"]')
     student_list_pop_up_button = (By.XPATH, '//div[text()="Далее"]')
+    your_class_hear_pop_up = (By.XPATH, '/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]')
     after_regist_pop_up_button = (By.CSS_SELECTOR, '[data-qa-marker="onboarding-button-next"]')
     biology_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')
     literature_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')
