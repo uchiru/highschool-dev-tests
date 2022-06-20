@@ -7,26 +7,26 @@ import time
 @pytest.mark.set_7th_b2t
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_head_page_elements_exists_b2c_7th:
+class Test_head_page_elements_exists_b2t_7th:
 
     def test_modern_byilogy_exist(self, browser):
         browser.implicitly_wait(15)
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
 
-    def test_moder_literature_exist(self, browser):
+    def test_modern_literature_exist(self, browser):
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
 
-    def test_moder_geography_exist(self, browser):
+    def test_modern_geography_exist(self, browser):
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_geo"]')) == 1, 'geography button not exist'
 
-    def test_moder_physics_exist(self, browser):
+    def test_modern_physics_exist(self, browser):
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_phys"]')) == 1, 'physics button not exist'
 
-    def test_moder_society_exist(self, browser):
+    def test_modern_society_exist(self, browser):
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_soc"]')) == 1, 'society button not exist'
 
@@ -34,7 +34,7 @@ class Test_head_page_elements_exists_b2c_7th:
 @pytest.mark.set_7th_b2t
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_high_school_buys_b2c_7th:
+class Test_high_school_buys_b2t_7th:
 
     @pytest.mark.new_code_try
     def test_buy_all_inclusive(self, browser):
