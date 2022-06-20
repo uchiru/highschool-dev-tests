@@ -22,12 +22,12 @@ jobs:
       matrix:
         browser: [remote_chrome]
     steps:
-    - uses: actions/setup-python@v2
+    - uses: actions/setup-python@v3
       with: { python-version: '3.9.7' }
     - run: mkdir -p $(dirname $SELENOID_BIN) && curl -s https://aerokube.com/cm/bash | bash && chmod +x ./cm && mv ./cm $SELENOID_BIN
     - uses: actions/checkout@v2
     - run: python3 -m pip install -r requirements.txt
-    - run: $SELENOID_BIN selenoid update --last-versions 2
+    - run: $SELENOID_BIN selenoid configure --browsers chrome --last-versions 2
     - run: $SELENOID_BIN selenoid start
     #- run: pytest ${{github.event.inputs.arguments}} --bn ${{ matrix.browser }}
     - run: |
