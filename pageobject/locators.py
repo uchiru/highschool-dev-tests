@@ -12,8 +12,12 @@ class headpage_elements:
 
 
 class payments_page_elements:
+    geo_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_geo"]')
+    history_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_history"]')
     modern_biology_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_biology"]')
     modern_literature_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_literature"]')
+    physics_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_physics"]')
+    society_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-modern_obshestvo"]')
     math_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-math"]')
     rus_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-russian"]')
     eng_check_box = (By.CSS_SELECTOR, '[data-qa-marker="product-name-english"]')
@@ -46,9 +50,12 @@ class teachers_elements:
     subjects_list_button = (By.CSS_SELECTOR, '[style="margin-left: 6px;"]')
     bio_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-32"]')
     lit_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-36"]')
+    geo_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-"]')
+    hist_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-"]')
     save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
     header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/stats/main"]')
     student_list_pop_up_button = (By.XPATH, '//div[text()="Далее"]')
+    your_class_hear_pop_up = (By.XPATH, '/html/body/div[2]/div[2]/div/div/div/div/div/div[3]/div[2]')
     after_regist_pop_up_button = (By.CSS_SELECTOR, '[data-qa-marker="onboarding-button-next"]')
     biology_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')
     literature_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')
