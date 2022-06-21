@@ -51,7 +51,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
 
     @pytest.mark.parametrize('old_checkboxes', old_subjects)
     def test_old_subjects_buy_year(self, browser, old_checkboxes):
@@ -61,7 +60,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
 
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_half_year(self, browser, checkboxes):
@@ -71,7 +69,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
 
     @pytest.mark.b2c_half_year
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
@@ -82,7 +79,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
 
     @pytest.mark.parametrize('checkboxes', new_subjects)
     def test_modern_subjects_buy_month(self, browser, checkboxes):
@@ -92,7 +88,6 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
 
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_month(self, browser, old_checkboxes):
@@ -102,4 +97,3 @@ class Test_high_school_buys_b2c:
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
