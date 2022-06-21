@@ -534,62 +534,70 @@ def regist_and_choose_classes(browser):     #учитель-5й класс
     browser.execute_script('return arguments[0].innerText = "sdfsdfsdfds";', checkbox)
     teach_agree_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_privacy_check)).click()
-    teach_email_letter_click = wdw(browser, 10).until(
+    teach_email_letter_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_email_letter_button)).click()
-    teach_name_input = wdw(browser, 10).until(
+    teach_name_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_name_box)).send_keys('Чувак')
-    teach_last_name_input = wdw(browser, 10).until(
+    teach_last_name_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_last_name_box)).send_keys('Чуваков')
-    teach_middle_name_input = wdw(browser, 10).until(
+    teach_middle_name_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_middle_name_box)).send_keys('Чувакович')
-    teach_phone_input = wdw(browser, 10).until(
+    teach_phone_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_phone_box)).click()
-    teach_phone_input = wdw(browser, 10).until(
+    teach_phone_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_phone_box)).send_keys('1111111111')
     teach_fio_letter_button = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_fio_letter_button)).click()
-    teach_region_select = wdw(browser, 10).until(
+    teach_region_select = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_region_list)).click()
-    teach_region_option = wdw(browser, 10).until(
+    teach_region_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_region_name)).click()
     teach_school_click = wdw(browser, 10).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_list)).click()
-    teach_school_send = wdw(browser, 10).until(
+    teach_school_send = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_list)).send_keys('666')
-    teach_school_option = wdw(browser, 40).until(
+    teach_school_option = wdw(browser, 45).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_name)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="next-step-school"]').location_once_scrolled_into_view
-    teach_school_letter_click = wdw(browser, 10).until(
+    teach_school_letter_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_later_button)).click()
-    teach_class_level = wdw(browser, 10).until(
+    teach_class_level = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_class_box)).click()
-    teach_class_level_option = wdw(browser, 10).until(
+    teach_class_level_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_class_level)).click()
-    literature_option = wdw(browser, 10).until(
+    literature_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.literature_checkbox)).click()
-    biology_option = wdw(browser, 10).until(
+    biology_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.biology_checbox)).click()
-    teach_class_letter_click = wdw(browser, 10).until(
+    teach_class_letter_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_class_letter_button)).click()
-    biology_group_option = wdw(browser, 10).until(
+    biology_group_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.option_biology_class)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="select-my-class-38"]').location_once_scrolled_into_view
-    literature_group_option = wdw(browser, 10).until(
+    literature_group_option = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.option_literature_class)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="next-step-group-select"]').location_once_scrolled_into_view
-    group_option_letter_button = wdw(browser, 10).until(
+    group_option_letter_button = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.class_option_letter_button)).click()
     browser.implicitly_wait(20)
     try:
-        continue_button = wdw(browser, 15).until(
+        onboarding_1_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_2_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_3_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_4_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_5_button = wdw(browser, 15).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
     except:
         print("Pop up lose")
-    have_biology = wdw(browser, 10).until(EC.visibility_of_element_located(teachers_elements.biology_at_menu))
-    have_literature = wdw(browser, 10).until(EC.visibility_of_element_located(teachers_elements.literature_at_menu))
+    have_biology = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.biology_at_menu))
+    have_literature = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.literature_at_menu))
     subjects_list = wdw(browser, 20).until(
         EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
     target = browser.find_element_by_css_selector(
