@@ -584,7 +584,15 @@ def regist_and_choose_classes(browser):     #учитель-5й класс
         EC.visibility_of_element_located(registraition_elements.class_option_letter_button)).click()
     browser.implicitly_wait(20)
     try:
-        continue_button = wdw(browser, 15).until(
+        onboarding_1_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_2_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_3_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_4_button = wdw(browser, 15).until(
+            EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
+        onboarding_5_button = wdw(browser, 15).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
     except:
         print("Pop up lose")
