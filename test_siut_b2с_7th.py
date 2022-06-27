@@ -4,10 +4,10 @@ from constance import *
 import time
 
 
-@pytest.mark.set_7th_b2t
+@pytest.mark.set_7th_b2c
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_head_page_elements_exists_b2t_7th:
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_7th')
+class Test_head_page_elements_exists_b2c_7th:
 
     def test_modern_byilogy_exist(self, browser):
         browser.implicitly_wait(15)
@@ -31,10 +31,10 @@ class Test_head_page_elements_exists_b2t_7th:
             '[data-qa-marker="content_soc"]')) == 1, 'society button not exist'
 
 
-@pytest.mark.set_7th_b2t
+@pytest.mark.set_7th_b2c
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_high_school_buys_b2t_7th:
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_7th')
+class Test_high_school_buys_b2c_7th:
 
     @pytest.mark.new_code_try
     def test_buy_all_inclusive(self, browser):

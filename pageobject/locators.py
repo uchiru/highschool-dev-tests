@@ -53,14 +53,14 @@ class teachers_elements:
     geo_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-"]')
     hist_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-"]')
     save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
-    header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/stats/main"]')
+    header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57772.shot-uchi.ru/teachers/stats/main"]')
     student_list_pop_up_button = (By.XPATH, '//div[text()="Далее"]')
     your_class_hear_pop_up = (By.CSS_SELECTOR, '[data-qa-marker="main_page_new_btn"]')
     after_regist_pop_up_button = (By.CSS_SELECTOR, '[data-qa-marker="onboarding-button-next"]')
     biology_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')
     literature_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')
     group_list = (By.CSS_SELECTOR, '[data-name="classlist"]')
-    class_settings_button = (By.CSS_SELECTOR, 'a[href="https://57211.shot-uchi.ru/teachers/class_books/1848357/students"]')
+    class_settings_button = (By.CSS_SELECTOR, 'a[href="https://57772.shot-uchi.ru/teachers/class_books/1848357/students"]')
     marathon_pop_up = (By.CSS_SELECTOR, 'img.bottom_bar__marathon-hint')
 
 class registraition_elements:

@@ -10,7 +10,7 @@ import time
 class Test_head_page_elements_exists_b2c:
 
     def test_modern_byilogy_exist(self, browser):
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         browser.implicitly_wait(5)
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
@@ -35,7 +35,7 @@ class Test_shopping_year:
     def test_all_inclussive(self, browser):
         year = year_methods
         year.buy_all_inclusive(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -45,7 +45,7 @@ class Test_shopping_year:
     def test_math_year(self, browser):
         year = year_methods
         year.buy_math_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -55,7 +55,7 @@ class Test_shopping_year:
     def test_math_rus_year(self, browser):
         year = year_methods
         year.buy_math_rus_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -65,7 +65,7 @@ class Test_shopping_year:
     def test_math_rus_eng_year(self, browser):
         year = year_methods
         year.buy_math_rus_eng_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -75,7 +75,7 @@ class Test_shopping_year:
     def test_math_rus_eng_prog_year(self, browser):
         year = year_methods
         year.buy_math_rus_eng_prog_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -85,7 +85,7 @@ class Test_shopping_year:
     def test_math_rus_eng_prog_plan_year(self, browser):
         year = year_methods
         year.buy_math_rus_eng_prog_plan_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -95,7 +95,7 @@ class Test_shopping_year:
     def test_math_rus_eng_prog_plan_bio_year(self, browser):
         year = year_methods
         year.buy_math_rus_eng_prog_plan_bio_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -105,7 +105,7 @@ class Test_shopping_year:
     def test_math_rus_eng_prog_plan_bio_lit_year(self, browser):
         year = year_methods
         year.buy_math_rus_eng_prog_plan_bio_lit_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -120,7 +120,7 @@ class Test_shopping_half_year:
     def test_math_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -130,7 +130,7 @@ class Test_shopping_half_year:
     def test_math_rus_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_rus_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -140,7 +140,7 @@ class Test_shopping_half_year:
     def test_math_rus_eng_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_rus_eng_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -150,7 +150,7 @@ class Test_shopping_half_year:
     def test_math_rus_eng_prog_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_rus_eng_prog_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -160,7 +160,7 @@ class Test_shopping_half_year:
     def test_math_rus_eng_prog_bio_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_rus_eng_prog_bio_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -170,7 +170,7 @@ class Test_shopping_half_year:
     def test_math_rus_eng_prog_bio_lit_half_year(self, browser):
         halfyear = Half_year_methods
         halfyear.buy_math_rus_eng_prog_bio_lit_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -185,7 +185,7 @@ class Test_shopping_month:
     def test_math_month(self, browser):
         month = Month_methods
         month.buy_math_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -195,7 +195,7 @@ class Test_shopping_month:
     def test_math_rus_month(self, browser):
         month = Month_methods
         month.buy_math_rus_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -205,7 +205,7 @@ class Test_shopping_month:
     def test_math_rus_eng_month(self, browser):
         month = Month_methods
         month.buy_math_rus_eng_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -215,7 +215,7 @@ class Test_shopping_month:
     def test_math_rus_eng_prog_month(self, browser):
         month = Month_methods
         month.buy_math_rus_eng_prog_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -225,7 +225,7 @@ class Test_shopping_month:
     def test_math_rus_eng_prog_bio_month(self, browser):
         month = Month_methods
         month.buy_math_rus_eng_prog_bio_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -235,7 +235,7 @@ class Test_shopping_month:
     def test_math_rus_eng_prog_bio_lit_month(self, browser):
         month = Month_methods
         month.buy_math_rus_eng_prog_bio_lit_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'

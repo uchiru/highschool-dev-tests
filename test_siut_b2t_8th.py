@@ -4,21 +4,13 @@ from constance import *
 import time
 
 
-@pytest.mark.set_7th_b2t
+@pytest.mark.set_8th_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_head_page_elements_exists_b2t_7th:
-
-    def test_modern_byilogy_exist(self, browser):
-        browser.implicitly_wait(15)
-        assert len(browser.find_elements_by_css_selector(
-            '[data-qa-marker="content_bio"]')) == 1, 'biology button not exist, or more 1'
-
-    def test_modern_literature_exist(self, browser):
-        assert len(browser.find_elements_by_css_selector(
-            '[data-qa-marker="content_lit"]')) == 1, 'literature button not exist'
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_8th')
+class Test_head_page_elements_exists_b2t_8th:
 
     def test_modern_geography_exist(self, browser):
+        browser.implicitly_wait(15)
         assert len(browser.find_elements_by_css_selector(
             '[data-qa-marker="content_geo"]')) == 1, 'geography button not exist'
 
@@ -31,10 +23,10 @@ class Test_head_page_elements_exists_b2t_7th:
             '[data-qa-marker="content_soc"]')) == 1, 'society button not exist'
 
 
-@pytest.mark.set_7th_b2t
+@pytest.mark.set_8th_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
-class Test_high_school_buys_b2t_7th:
+@pytest.mark.usefixtures('browser', 'avtorithaision_b2t_8th')
+class Test_high_school_buys_b2t_8th:
 
     @pytest.mark.new_code_try
     def test_buy_all_inclusive(self, browser):
@@ -46,9 +38,9 @@ class Test_high_school_buys_b2t_7th:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.all_inclusive_congrat_button)).click()
 
-    @pytest.mark.parametrize('checkboxes', new_subjects_7th)
-    def test_modern_subjects_buy_year_7th(self, browser, checkboxes):
-        new_subjects_year_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
+    @pytest.mark.parametrize('checkboxes', new_subjects_8th)
+    def test_modern_subjects_buy_year_8th(self, browser, checkboxes):
+        new_subjects_year_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
         congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
@@ -67,9 +59,9 @@ class Test_high_school_buys_b2t_7th:
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
         time.sleep(2)
 
-    @pytest.mark.parametrize('checkboxes', new_subjects_7th)
-    def test_modern_subjects_buy_half_year_7th(self, browser, checkboxes):
-        new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
+    @pytest.mark.parametrize('checkboxes', new_subjects_8th)
+    def test_modern_subjects_buy_half_year_8th(self, browser, checkboxes):
+        new_subjects_halfyear_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
         congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
@@ -85,9 +77,9 @@ class Test_high_school_buys_b2t_7th:
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
 
-    @pytest.mark.parametrize('checkboxes', new_subjects_7th)
-    def test_modern_subjects_buy_month_7th(self, browser, checkboxes):
-        new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
+    @pytest.mark.parametrize('checkboxes', new_subjects_8th)
+    def test_modern_subjects_buy_month_8th(self, browser, checkboxes):
+        new_subjects_month_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
         congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
