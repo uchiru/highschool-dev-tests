@@ -28,7 +28,7 @@ def buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1):
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 25).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
-    choose_all_inclusive = wdw(browser, 15).until(
+    choose_all_inclusive = wdw(browser, 20).until(
         EC.visibility_of_element_located(payments_page_elements.all_inclusive_button)).click()
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
@@ -620,43 +620,43 @@ def teach_sub_management(browser, choose_subjects):  # учитель-5й кла
     subjects_list = wdw(browser, 25).until(
         EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
     if choose_subjects == 'bio':
-        bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
+        bio_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
     # elif choose_subjects == 'geo':
-    #     geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+    #     geo_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
     # elif choose_subjects == 'hist':
-    #     hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
+    #     hist_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     elif choose_subjects == 'lit':
-        lit_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
+        lit_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
     else:
-        bio_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
-        lit_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
-        # geo_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
-        # hist_choose = wdw(browser, 15).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
+        bio_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
+        lit_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
+        # geo_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+        # hist_choose = wdw(browser, 20).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
-    save_change_click = wdw(browser, 15).until(
+    save_change_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
     try:
-        continue_button = wdw(browser, 15).until(
+        continue_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
     except:
         print("Pop up lose")
-    header_click = wdw(browser, 15).until(
+    header_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
     browser.implicitly_wait(5)
 
 
 def regist_and_choose_classes(browser):  # учитель-5й класс
     browser.get('https://57772.shot-uchi.ru')
-    regist_click = wdw(browser, 10).until(
+    regist_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.regist_button)).click()
-    choose_role_button = wdw(browser, 10).until(
+    choose_role_button = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_role_button)).click()
-    teach_email_input = wdw(browser, 10).until(
+    teach_email_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_email_box)).send_keys(generate_email(7))
-    teach_password_input = wdw(browser, 10).until(
+    teach_password_input = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_password_box)).send_keys('11111111')
-    checkbox = wdw(browser, 10).until(EC.visibility_of_element_located(registraition_elements.teach_privacy_check))
+    checkbox = wdw(browser, 20).until(EC.visibility_of_element_located(registraition_elements.teach_privacy_check))
     browser.execute_script('return console.log(arguments[0]);', checkbox)
     browser.execute_script('return arguments[0].innerText = "sdfsdfsdfds";', checkbox)
     teach_agree_click = wdw(browser, 25).until(
@@ -679,7 +679,7 @@ def regist_and_choose_classes(browser):  # учитель-5й класс
         EC.visibility_of_element_located(registraition_elements.teach_region_list)).click()
     teach_region_option = wdw(browser, 25).until(
         EC.visibility_of_element_located(registraition_elements.teach_region_name)).click()
-    teach_school_click = wdw(browser, 10).until(
+    teach_school_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_list)).click()
     teach_school_send = wdw(browser, 25).until(
         EC.visibility_of_element_located(registraition_elements.teach_school_list)).send_keys('666')
@@ -711,15 +711,15 @@ def regist_and_choose_classes(browser):  # учитель-5й класс
         EC.visibility_of_element_located(registraition_elements.class_option_letter_button)).click()
     browser.implicitly_wait(20)
     try:
-        onboarding_1_button = wdw(browser, 15).until(
+        onboarding_1_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
-        onboarding_2_button = wdw(browser, 15).until(
+        onboarding_2_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
-        onboarding_3_button = wdw(browser, 15).until(
+        onboarding_3_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
-        onboarding_4_button = wdw(browser, 15).until(
+        onboarding_4_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
-        onboarding_5_button = wdw(browser, 15).until(
+        onboarding_5_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.your_class_hear_pop_up)).click()
     except:
         print("Pop up lose")
@@ -730,14 +730,14 @@ def regist_and_choose_classes(browser):  # учитель-5й класс
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
     try:
-        marathon_button = wdw(browser, 15).until(
+        marathon_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.marathon_pop_up)).click()
     except:
         print("Pop up lose")
-    save_change_click = wdw(browser, 15).until(
+    save_change_click = wdw(browser, 20).until(
         EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
     try:
-        continue_button = wdw(browser, 15).until(
+        continue_button = wdw(browser, 20).until(
             EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
     except:
         print("Pop up lose")
