@@ -8,7 +8,7 @@ import string
 
 
 def buy_math_rus_eng_year(browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка математики, русского и английского на год
-    browser.get('https://57211.shot-uchi.ru/profile/students')
+    browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
@@ -31,7 +31,7 @@ def buy_math_rus_eng_year(browser, card_1, mmyy_1, cvv_1, paypass_1):  # пок�
 
 
 def buy_math_rus_year(browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка математики и русского на год
-    browser.get('https://57211.shot-uchi.ru/profile/students')
+    browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 20).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     eng_click = wdw(browser, 20).until(
@@ -58,7 +58,7 @@ def buy_math_rus_year(browser, card_1, mmyy_1, cvv_1, paypass_1):  # покуп�
 class year_methods:
 
     def buy_all_inclusive(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка все включено
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         all_inclusive_click = wdw(browser, 10).until(
@@ -81,7 +81,7 @@ class year_methods:
             EC.visibility_of_element_located(congrat_page_elements.all_inclusive_congrat_button))
 
     def buy_math_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # Покупка математики на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         rus_click = wdw(browser, 20).until(
@@ -107,7 +107,7 @@ class year_methods:
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
     def buy_math_rus_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # Покупка математики на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         eng_click = wdw(browser, 20).until(
@@ -131,7 +131,7 @@ class year_methods:
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
     def buy_math_rus_eng_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # Покупка математики на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         buy_click = wdw(browser, 20).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
@@ -154,7 +154,7 @@ class year_methods:
 
     def buy_math_rus_eng_prog_year(self, browser, card_1, mmyy_1, cvv_1,
                                    paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         prog_click = wdw(browser, 20).until(
@@ -179,7 +179,7 @@ class year_methods:
 
     def buy_math_rus_eng_prog_plan_year(self, browser, card_1, mmyy_1, cvv_1,
                                         paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         prog_click = wdw(browser, 20).until(
@@ -206,7 +206,7 @@ class year_methods:
 
     def buy_math_rus_eng_prog_plan_bio_year(self, browser, card_1, mmyy_1, cvv_1,
                                             paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         prog_click = wdw(browser, 20).until(
@@ -235,7 +235,7 @@ class year_methods:
 
     def buy_math_rus_eng_prog_plan_bio_lit_year(self, browser, card_1, mmyy_1, cvv_1,
                                                 paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         prog_click = wdw(browser, 20).until(
@@ -268,7 +268,7 @@ class year_methods:
 class Half_year_methods:
 
     def buy_math_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # Покупка математики на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -296,7 +296,7 @@ class Half_year_methods:
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
     def buy_math_rus_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка математики и русского на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -323,7 +323,7 @@ class Half_year_methods:
 
     def buy_math_rus_eng_half_year(self, browser, card_1, mmyy_1, cvv_1,
                                    paypass_1):  # покупка математики, русского и английского на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -348,7 +348,7 @@ class Half_year_methods:
 
     def buy_math_rus_eng_prog_half_year(self, browser, card_1, mmyy_1, cvv_1,
                                         paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -375,7 +375,7 @@ class Half_year_methods:
 
     def buy_math_rus_eng_prog_bio_half_year(self, browser, card_1, mmyy_1, cvv_1,
                                             paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -403,7 +403,7 @@ class Half_year_methods:
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
     def buy_math_rus_eng_prog_bio_lit_half_year(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -436,7 +436,7 @@ class Half_year_methods:
 class Month_methods:
 
     def buy_math_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # Покупка математики на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -464,7 +464,7 @@ class Month_methods:
         paid_click = wdw(browser, 20).until(EC.visibility_of_element_located(congrat_page_elements.congrat_button))
 
     def buy_math_rus_month(self, browser, card_1, mmyy_1, cvv_1, paypass_1):  # покупка математики и русского на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -491,7 +491,7 @@ class Month_methods:
 
     def buy_math_rus_eng_month(self, browser, card_1, mmyy_1, cvv_1,
                                    paypass_1):  # покупка математики, русского и английского на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
             EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
@@ -515,7 +515,7 @@ class Month_methods:
 
     def buy_math_rus_eng_prog_month(self, browser, card_1, mmyy_1, cvv_1,
                                         paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -542,7 +542,7 @@ class Month_methods:
 
     def buy_math_rus_eng_prog_bio_month(self, browser, card_1, mmyy_1, cvv_1,
                                             paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(
@@ -571,7 +571,7 @@ class Month_methods:
 
     def buy_math_rus_eng_prog_bio_lit_month(self, browser, card_1, mmyy_1, cvv_1,
                                                 paypass_1):  # покупка математики, русского, английского и программирования на год
-        browser.get('https://57211.shot-uchi.ru/profile/students')
+        browser.get('https://57772.shot-uchi.ru/profile/students')
         full_version = wdw(browser, 20).until(
             EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
         gradusnick_click = wdw(browser, 20).until(

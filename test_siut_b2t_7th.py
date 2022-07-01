@@ -39,7 +39,7 @@ class Test_high_school_buys_b2t_7th:
     @pytest.mark.new_code_try
     def test_buy_all_inclusive(self, browser):
         buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
@@ -49,28 +49,28 @@ class Test_high_school_buys_b2t_7th:
     @pytest.mark.parametrize('checkboxes', new_subjects_7th)
     def test_modern_subjects_buy_year_7th(self, browser, checkboxes):
         new_subjects_year_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         index = current_url.find(congrat)
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
+        time.sleep(2)
 
     @pytest.mark.parametrize('old_checkboxes', old_subjects)
     def test_old_subjects_buy_year(self, browser, old_checkboxes):
         old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
             EC.presence_of_element_located(congrat_page_elements.congrat_button)).click()
-        time.sleep(5)
+        time.sleep(2)
 
     @pytest.mark.parametrize('checkboxes', new_subjects_7th)
     def test_modern_subjects_buy_half_year_7th(self, browser, checkboxes):
         new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
@@ -79,7 +79,7 @@ class Test_high_school_buys_b2t_7th:
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_half_year(self, browser, old_checkboxes):
         old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
@@ -88,7 +88,7 @@ class Test_high_school_buys_b2t_7th:
     @pytest.mark.parametrize('checkboxes', new_subjects_7th)
     def test_modern_subjects_buy_month_7th(self, browser, checkboxes):
         new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
@@ -97,7 +97,7 @@ class Test_high_school_buys_b2t_7th:
     @pytest.mark.parametrize('old_checkboxes', old_subjects_not_year)
     def test_old_subjects_buy_month(self, browser, old_checkboxes):
         old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, old_checkboxes)
-        congrat = 'https://57211.shot-uchi.ru/students/payments/complete'
+        congrat = 'https://57772.shot-uchi.ru/students/payments/complete'
         current_url = browser.current_url
         assert current_url == congrat, 'not correct page'
         congrat_button_click = wdw(browser, 10).until(
