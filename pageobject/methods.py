@@ -28,6 +28,7 @@ def buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1):
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     choose_all_inclusive = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.all_inclusive_button)).click()
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
@@ -38,7 +39,7 @@ def buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1):
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -51,6 +52,7 @@ def new_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
@@ -83,7 +85,7 @@ def new_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbox
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -95,6 +97,7 @@ def new_subjects_year_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
@@ -132,7 +135,7 @@ def new_subjects_year_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -144,6 +147,7 @@ def new_subjects_year_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     if choose_checkbox == 'soc':
         society_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.society_check_box)).click()
@@ -171,7 +175,7 @@ def new_subjects_year_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -183,6 +187,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     if choose_check_box == 'math':
         rus_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
@@ -222,7 +227,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
         prog_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.prog_check_box)).click()
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
@@ -231,7 +236,7 @@ def old_subjects_year(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_bo
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -245,9 +250,8 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
-        browser.implicitly_wait(5)
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
     elif choose_checkbox == 'lit':
@@ -270,7 +274,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
             EC.visibility_of_element_located(payments_page_elements.geo_check_box)).click()
     skip_over_checkbox(browser)
     buy_click = wdw(browser, 30).until(EC.visibility_of_element_located(payments_page_elements.buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     card = wdw(browser, 40).until(EC.visibility_of_element_located(card_data_page_elements.card_num)).send_keys(
         card_data.card_1)
     mmyy = wdw(browser, 30).until(EC.visibility_of_element_located(card_data_page_elements.card_date)).send_keys(
@@ -279,7 +283,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -291,11 +295,12 @@ def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
-        browser.implicitly_wait(5)
+        browser.implicitly_wait(15)
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
     elif choose_checkbox == 'lit':
@@ -332,7 +337,7 @@ def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -344,9 +349,10 @@ def new_subjects_halfyear_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'soc':
         society_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.society_check_box)).click()
@@ -374,7 +380,7 @@ def new_subjects_halfyear_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -386,9 +392,10 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_check_box == 'math':
         rus_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
@@ -420,7 +427,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -432,9 +439,10 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
@@ -467,7 +475,7 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(
         card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -479,9 +487,10 @@ def new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
         modern_biology_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.modern_biology_check_box)).click()
@@ -519,7 +528,7 @@ def new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(
         card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -531,9 +540,10 @@ def new_subjects_month_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_checkbox == 'soc':
         society_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.society_check_box)).click()
@@ -561,7 +571,7 @@ def new_subjects_month_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(
         card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -573,9 +583,10 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
+    browser.implicitly_wait(15)
     gradusnick_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     if choose_check_box == 'math':
         rus_click = wdw(browser, 30).until(
             EC.visibility_of_element_located(payments_page_elements.rus_check_box)).click()
@@ -607,7 +618,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(10)
+    browser.implicitly_wait(15)
     paypass = wdw(browser, 40).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -643,7 +654,7 @@ def teach_sub_management(browser, choose_subjects):  # учитель-5й кла
         print("Pop up lose")
     header_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
-    browser.implicitly_wait(5)
+    browser.implicitly_wait(15)
 
 
 def regist_and_choose_classes(browser):  # учитель-5й класс
