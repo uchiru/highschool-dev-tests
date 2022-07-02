@@ -39,7 +39,7 @@ def buy_all_inclusive(browser, card_1, mmyy_1, cvv_1, paypass_1):
         card_data.cvv_1)
     card_buy_click = wdw(browser, 30).until(
         EC.visibility_of_element_located(card_data_page_elements.card_buy_button)).click()
-    browser.implicitly_wait(15)
+    browser.implicitly_wait(20)
     paypass = wdw(browser, 30).until(
         EC.visibility_of_element_located(cloud_page_elements.password_input)).send_keys(card_data.paypass_1)
     paypass_click = wdw(browser, 30).until(
@@ -390,6 +390,7 @@ def new_subjects_halfyear_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
 
 def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_box):  # ученик старые предметы
     browser.get('https://57772.shot-uchi.ru/profile/students')
+    browser.implicitly_wait(10)
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
