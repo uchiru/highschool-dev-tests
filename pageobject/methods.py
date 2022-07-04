@@ -248,7 +248,7 @@ def new_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     browser.get('https://57772.shot-uchi.ru/profile/students')
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
@@ -296,7 +296,7 @@ def new_subjects_halfyear_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
@@ -350,7 +350,7 @@ def new_subjects_halfyear_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'soc':
@@ -394,7 +394,7 @@ def old_subjects_halfyear(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_chec
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_halfyear)).click()
     browser.implicitly_wait(15)
     if choose_check_box == 'math':
@@ -441,7 +441,7 @@ def new_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_checkbo
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
@@ -489,7 +489,7 @@ def new_subjects_month_7th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'bio':
@@ -542,7 +542,7 @@ def new_subjects_month_8th(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_che
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
     browser.implicitly_wait(15)
     if choose_checkbox == 'soc':
@@ -585,7 +585,7 @@ def old_subjects_month(browser, card_1, mmyy_1, cvv_1, paypass_1, choose_check_b
     full_version = wdw(browser, 30).until(
         EC.visibility_of_element_located(headpage_elements.full_version_button)).click()
     browser.implicitly_wait(15)
-    gradusnick_click = wdw(browser, 30).until(
+    gradusnick_click = wdw(browser, 35).until(
         EC.visibility_of_element_located(payments_page_elements.gradusnik_month)).click()
     browser.implicitly_wait(15)
     if choose_check_box == 'math':
