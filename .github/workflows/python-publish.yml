@@ -40,4 +40,20 @@ jobs:
       env:
         SELENOID_URL: http://localhost:4444/wd/hub
         
+  slack-workflow-status:
+    if: failure()
+    name: Post Workflow Status To Slack
+    needs:
+      - tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        with:
+          status: ${{ job.status }}
+        env:
+          SLACK_WEBHOOK: https://hooks.slack.com/services/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
+          SLACK_CHANNEL: tests_products_5-11
+          SLACK_MESSAGE: Есть падение, капитан
  
