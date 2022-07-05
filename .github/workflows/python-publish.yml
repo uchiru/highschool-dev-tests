@@ -53,7 +53,7 @@ jobs:
         with:
           status: ${{ job.status }}
         env:
-          SLACK_WEBHOOK: https://hooks.slack.com/services/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
+          SLACK_WEBHOOK: https://hooks.slack.com/services/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
           SLACK_CHANNEL: tests_products_5-11
           SLACK_MESSAGE: Есть падение, капитан
  
