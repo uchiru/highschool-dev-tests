@@ -2,8 +2,10 @@ from pageobject.methods_w_p import *
 import pytest
 from constance import *
 import time
+from flaky import flaky
 
 
+@flaky
 @pytest.mark.new_subjects
 @pytest.mark.old_way
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
@@ -28,6 +30,7 @@ class Test_head_page_elements_exists_b2c:
             '[data-qa-marker="content_hist"]')) == 1, 'literature button not exist'
 
 
+@flaky
 @pytest.mark.old_way
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
 class Test_shopping_year:

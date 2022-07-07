@@ -2,8 +2,10 @@ from pageobject.methods import *
 import pytest
 from constance import *
 import time
+from flaky import flaky
 
 
+@flaky
 @pytest.mark.set_7th_b2t
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')
@@ -31,6 +33,7 @@ class Test_head_page_elements_exists_b2t_7th:
             '[data-qa-marker="content_soc"]')) == 1, 'society button not exist'
 
 
+@flaky
 @pytest.mark.set_7th_b2t
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2t_7th')

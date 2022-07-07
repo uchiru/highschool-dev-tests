@@ -3,8 +3,10 @@ import pytest
 from constance import *
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as EC
+from flaky import flaky
 
 
+@flaky
 @pytest.mark.usefixtures('browser', 'avtorithaision_techear')
 class Test_teacher_sub_management:
 
