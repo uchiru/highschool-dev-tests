@@ -634,17 +634,17 @@ def teach_sub_management(browser, choose_subjects):  # учитель-5й кла
     browser.implicitly_wait(15)
     if choose_subjects == 'bio':
         bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
-    # elif choose_subjects == 'geo':
-    #     geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
-    # elif choose_subjects == 'hist':
-    #     hist_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
+    elif choose_subjects == 'geo':
+        geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+    elif choose_subjects == 'hist':
+        hist_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     elif choose_subjects == 'lit':
         lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
     else:
         bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
         lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
-        # geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
-        # hist_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
+        geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+        hist_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.hist_check)).click()
     target = browser.find_element_by_css_selector(
         '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
     save_change_click = wdw(browser, 30).until(
