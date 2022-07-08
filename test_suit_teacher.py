@@ -11,11 +11,12 @@ from pageobject.locators import *
 @pytest.mark.usefixtures('browser', 'avtorithaision_techear')
 class Test_teacher_sub_management:
 
-    #@pytest.mark.regress
+    @pytest.mark.regress
     @pytest.mark.teach_set
     @pytest.mark.parametrize('checkboxes', teach_subjects)
     def test_sub_management(self, browser, checkboxes):
-        if len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')) == 0:
+        if len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')) == 0 and \
+                checkboxes == 'bio':
             subjects_list = wdw(browser, 30).until(
                 EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
             bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
@@ -24,7 +25,8 @@ class Test_teacher_sub_management:
             save_change_click = wdw(browser, 30).until(
                 EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
             browser.get('https://57772.shot-uchi.ru/teachers/lk/main')
-        elif len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')) == 0:
+        elif len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')) == 0 and \
+                checkboxes == 'lit':
             subjects_list = wdw(browser, 30).until(
                 EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
             lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
