@@ -4,16 +4,36 @@ from constance import *
 from selenium.webdriver.support.ui import WebDriverWait as wdw
 from selenium.webdriver.support import expected_conditions as EC
 from flaky import flaky
+from pageobject.locators import *
 
 
 @flaky
 @pytest.mark.usefixtures('browser', 'avtorithaision_techear')
 class Test_teacher_sub_management:
 
-    @pytest.mark.regress
+    #@pytest.mark.regress
     @pytest.mark.teach_set
     @pytest.mark.parametrize('checkboxes', teach_subjects)
     def test_sub_management(self, browser, checkboxes):
+        if len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')) == 0:
+            subjects_list = wdw(browser, 30).until(
+                EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
+            bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
+            target = browser.find_element_by_css_selector(
+                '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
+            save_change_click = wdw(browser, 30).until(
+                EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
+            browser.get('https://57772.shot-uchi.ru/teachers/lk/main')
+        elif len(browser.find_elements(By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')) == 0:
+            subjects_list = wdw(browser, 30).until(
+                EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
+            lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
+            target = browser.find_element_by_css_selector(
+                '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
+            save_change_click = wdw(browser, 30).until(
+                EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
+            browser.get('https://57772.shot-uchi.ru/teachers/lk/main')
+
         teach_sub_management(browser, checkboxes)
         if checkboxes == 'bio':
             assert len(browser.find_elements_by_css_selector(
@@ -27,7 +47,7 @@ class Test_teacher_sub_management:
         # elif checkboxes == 'hist':
         #     assert len(browser.find_elements_by_css_selector(
         #         '[data-qa-marker="menu-modern_history"]')) == 0, 'literature missing at programs list'
-        else:
+        elif checkboxes == 'all_checks':
             assert len(browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_biology"]')) == 1 and len(
                 browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_literature"]')) == 1 #and len(
                 # browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_geography"]')) == 1 and len(
