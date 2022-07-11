@@ -2,8 +2,10 @@ from pageobject.methods import *
 import pytest
 from constance import *
 import time
+from flaky import flaky
 
 
+@flaky
 @pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
@@ -27,6 +29,7 @@ class Test_head_page_elements_exists_b2c:
             '[data-qa-marker="content_hist"]')) == 1, 'history button not exist'
 
 
+@flaky
 @pytest.mark.set_b2c
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'avtorithaision_b2c')
