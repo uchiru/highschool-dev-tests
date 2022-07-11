@@ -53,6 +53,7 @@ jobs:
         with:
           status: ${{ job.status }}
         env:
-          SLACK_WEBHOOK: https://hooks.slack.com/services/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
+          SLACK_WEBHOOK: ${{ secrets.WEBHOOKS_URL }}
           SLACK_CHANNEL: tests_products_5-11
           SLACK_MESSAGE: Есть падение, капитан
+          SLACK_COLOR: red
