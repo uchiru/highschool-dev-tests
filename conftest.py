@@ -137,3 +137,15 @@ def avtorithaision_techear(browser, login_teacher='min+admin@uchi.ru', password_
     password_input = wdw(browser, 35).until(
         EC.presence_of_element_located(avtor_page_elements.password_input)).send_keys(password_teacher)
     enter = wdw(browser, 30).until(EC.presence_of_element_located(avtor_page_elements.enter_button)).click()
+
+
+@pytest.fixture(scope='class')
+def avtorithaision_techear_7th(browser, login_teacher='teach_for_7@uchi.ru', password_teacher='11111111'):
+    browser.get('https://57772.shot-uchi.ru/')
+    browser.implicitly_wait(10)
+    login_input = wdw(browser, 30).until(EC.presence_of_element_located(avtor_page_elements.login_input)).send_keys(
+        login_teacher)
+    time.sleep(3)
+    password_input = wdw(browser, 35).until(
+        EC.presence_of_element_located(avtor_page_elements.password_input)).send_keys(password_teacher)
+    enter = wdw(browser, 30).until(EC.presence_of_element_located(avtor_page_elements.enter_button)).click()

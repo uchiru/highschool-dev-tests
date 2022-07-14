@@ -1,4 +1,5 @@
 teach_subjects = ['bio', 'lit', 'geo', 'hist', 'all_checks']  # список чекбоксов выбираемых на странице предметов преподаваемых учителем
+teach_subjects_7th = ['bio', 'lit', 'geo', 'phys', 'soc', 'all_checks']
 new_subjects = ['bio', 'lit', 'hist', 'geo', 'all_types']  # список чекбоксов выбираемых на странице тарифов
 new_subjects_7th = ['bio', 'lit', 'soc', 'phys', 'geo', 'all_types']
 new_subjects_8th = ['soc', 'phys', 'geo', 'all_types']
