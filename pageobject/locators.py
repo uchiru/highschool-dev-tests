@@ -52,6 +52,8 @@ class teachers_elements:
     lit_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-36"]')
     geo_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-9"]')
     hist_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-13"]')
+    phys_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-10"]')
+    soc_check = (By.CSS_SELECTOR, '[data-qa-marker="subject-id-11"]')
     save_check_button = (By.CSS_SELECTOR, '[data-qa-marker="submit-editable-class"]')
     header_head_page_button = (By.CSS_SELECTOR, 'a[href="https://57772.shot-uchi.ru/teachers/stats/main"]')
     student_list_pop_up_button = (By.XPATH, '//div[text()="Далее"]')

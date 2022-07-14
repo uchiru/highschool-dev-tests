@@ -660,6 +660,43 @@ def teach_sub_management(browser, choose_subjects):  # учитель-5й кла
     browser.implicitly_wait(15)
 
 
+def teach_sub_management_7th(browser, choose_subjects):  # учитель-5й класс
+    browser.get('https://57772.shot-uchi.ru/teachers/lk/main')
+    subjects_list = wdw(browser, 30).until(
+        EC.visibility_of_element_located(teachers_elements.subjects_list_button)).click()
+    browser.implicitly_wait(15)
+    if choose_subjects == 'bio':
+        bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
+    elif choose_subjects == 'geo':
+        geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+    elif choose_subjects == 'phys':
+        phys_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.phys_check)).click()
+    elif choose_subjects == 'soc':
+        soc_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.soc_check)).click()
+    elif choose_subjects == 'lit':
+        lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
+    else:
+        bio_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.bio_check)).click()
+        lit_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.lit_check)).click()
+        geo_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.geo_check)).click()
+        phys_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.phys_check)).click()
+        soc_choose = wdw(browser, 30).until(EC.visibility_of_element_located(teachers_elements.soc_check)).click()
+
+    target = browser.find_element_by_css_selector(
+        '[data-qa-marker="submit-editable-class"]').location_once_scrolled_into_view
+    save_change_click = wdw(browser, 30).until(
+        EC.visibility_of_element_located(teachers_elements.save_check_button)).click()
+    browser.implicitly_wait(15)
+    try:
+        continue_button = wdw(browser, 30).until(
+            EC.visibility_of_element_located(teachers_elements.student_list_pop_up_button)).click()
+    except:
+        print("Pop up lose")
+    header_click = wdw(browser, 30).until(
+        EC.visibility_of_element_located(teachers_elements.header_head_page_button)).click()
+    browser.implicitly_wait(15)
+
+
 def regist_and_choose_classes(browser):  # учитель-5й класс
     browser.get('https://57772.shot-uchi.ru')
     regist_click = wdw(browser, 30).until(
