@@ -56,4 +56,4 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.WEBHOOKS_URL }}
           SLACK_CHANNEL: tests_products_5-11
           SLACK_MESSAGE: Есть падение, капитан
-          SLACK_COLOR: red
+          SLACK_COLOR: bad
