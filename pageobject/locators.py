@@ -61,9 +61,12 @@ class teachers_elements:
     after_regist_pop_up_button = (By.CSS_SELECTOR, '[data-qa-marker="onboarding-button-next"]')
     biology_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_biology"]')
     literature_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-modern_literature"]')
+    geography_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-geo"]')
+    physics_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-phys"]')
+    social_at_menu = (By.CSS_SELECTOR, '[data-qa-marker="menu-soc"]')
     group_list = (By.CSS_SELECTOR, '[data-name="classlist"]')
     class_settings_button = (
-    By.CSS_SELECTOR, 'a[href="https://57772.shot-uchi.ru/teachers/class_books/1848357/students"]')
+        By.CSS_SELECTOR, 'a[href="https://57772.shot-uchi.ru/teachers/class_books/1848357/students"]')
     marathon_pop_up = (By.CSS_SELECTOR, 'img.bottom_bar__marathon-hint')
 
 

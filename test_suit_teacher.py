@@ -8,7 +8,7 @@ from pageobject.locators import *
 
 
 @flaky
-@pytest.mark.usefixtures('browser', 'avtorithaision_techear')
+@pytest.mark.usefixtures('browser', 'authorization_techear')
 class Test_teacher_sub_management:
 
     @pytest.mark.regress

@@ -8,7 +8,7 @@ from flaky import flaky
 @flaky
 @pytest.mark.set_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
+@pytest.mark.usefixtures('browser', 'authorization_b2t')
 class Test_head_page_elements_exists_b2t:
 
     def test_modern_byilogy_exist(self, browser):
@@ -32,7 +32,32 @@ class Test_head_page_elements_exists_b2t:
 @flaky
 @pytest.mark.set_b2t
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2t')
+@pytest.mark.usefixtures('browser', 'authorization_b2t')
+class Test_lk_new_subjects_exists:
+
+    def test_lk_new_biology_exists(self, browser):
+        browser.get('https://57772.shot-uchi.ru/profile/students/settings')
+        browser.implicitly_wait(25)
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_biology"]')) == 1, 'byology missing'
+
+    def test_lk_new_literature_exists(self, browser):
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_literature"]')) == 1, 'literature missing'
+
+    def test_lk_new_geography_exists(self, browser):
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_geography"]')) == 1, 'geography missing'
+
+    def test_lk_new_history_exists(self, browser):
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_history"]')) == 1, 'history missing'
+
+
+@flaky
+@pytest.mark.set_b2t
+@pytest.mark.regress
+@pytest.mark.usefixtures('browser', 'authorization_b2t')
 class Test_high_school_buys_b2t:
 
     @pytest.mark.new_code_try
