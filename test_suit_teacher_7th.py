@@ -8,7 +8,7 @@ from pageobject.locators import *
 
 
 @flaky
-@pytest.mark.usefixtures('browser', 'avtorithaision_techear_7th')
+@pytest.mark.usefixtures('browser', 'authorization_techear_7th')
 class Test_teacher_7th_sub_management:
 
     @pytest.mark.regress
@@ -86,7 +86,8 @@ class Test_teacher_7th_sub_management:
                 browser.find_elements_by_css_selector('[data-qa-marker="menu-modern_literature"]')) == 1 and len(
                 browser.find_elements_by_css_selector('[data-qa-marker="menu-geo"]')) == 1 and len(
                 browser.find_elements_by_css_selector('[data-qa-marker="menu-phys"]')) == 1 and len(
-                browser.find_elements_by_css_selector('[data-qa-marker="menu-soc"]')) == 1, 'some new subject missing at progrrams list'
+                browser.find_elements_by_css_selector(
+                    '[data-qa-marker="menu-soc"]')) == 1, 'some new subject missing at programs list'
 
 
 # class Test_teacher_with_registration:

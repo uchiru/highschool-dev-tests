@@ -8,7 +8,7 @@ from flaky import flaky
 @flaky
 @pytest.mark.set_8th_b2c
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_8th')
+@pytest.mark.usefixtures('browser', 'authorization_b2c_8th')
 class Test_head_page_elements_exists_b2c_8th:
 
     def test_modern_geography_exist(self, browser):
@@ -28,7 +28,28 @@ class Test_head_page_elements_exists_b2c_8th:
 @flaky
 @pytest.mark.set_8th_b2c
 @pytest.mark.regress
-@pytest.mark.usefixtures('browser', 'avtorithaision_b2c_8th')
+@pytest.mark.usefixtures('browser', 'authorization_b2c_8th')
+class Test_lk_new_subjects_exists:
+
+    def test_lk_new_geography_exists(self, browser):
+        browser.get('https://57772.shot-uchi.ru/profile/students/settings')
+        browser.implicitly_wait(25)
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_geography"]')) == 1, 'geography missing'
+
+    def test_lk_new_physics(self, browser):
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_physics"]')) == 1, 'physics missing'
+
+    def test_lk_new_society(self, browser):
+        assert len(browser.find_elements(By.CSS_SELECTOR,
+                                         '[data-qa-marker="discipline-modern_social_science"]')) == 1, 'society missing'
+
+
+@flaky
+@pytest.mark.set_8th_b2c
+@pytest.mark.regress
+@pytest.mark.usefixtures('browser', 'authorization_b2c_8th')
 class Test_high_school_buys_b2c_8th:
 
     @pytest.mark.new_code_try
