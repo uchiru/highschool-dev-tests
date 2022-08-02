@@ -30,7 +30,7 @@ class Test_head_page_elements_exists_b2t:
 
 
 @flaky
-@pytest.mark.set_6th_b2t
+@pytest.mark.set_b2t_6th
 @pytest.mark.regress
 @pytest.mark.usefixtures('browser', 'authorization_b2t_6th')
 class Test_lk_new_subjects_exists:
